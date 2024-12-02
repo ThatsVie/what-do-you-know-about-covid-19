@@ -15,13 +15,25 @@ app.use(morgan("dev"));
 
 // MongoDB Connection
 mongoose
-  .connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(process.env.MONGODB_URI)
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
 // Routes
 const articlesRouter = require("./routes/articles");
+
+// Root Route for Testing
+app.get("/", (req, res) => {
+  res.send("Welcome to the COVID-19 Articles API!");
+});
+
+// Articles Route
 app.use("/articles", articlesRouter);
+
+// Handle 404 for Unhandled Routes
+app.use((req, res) => {
+  res.status(404).json({ error: "Route not found" });
+});
 
 // Start Server
 app.listen(PORT, () => {
