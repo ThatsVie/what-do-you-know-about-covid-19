@@ -1,50 +1,369 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #25274D;
+  color: #AAABB8;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header {
+  background: linear-gradient(135deg, #2E9CCA, #29648A);
+  padding: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* General padding */
+.articles-page {
+  padding: 20px;
+}
+
+/* Articles list */
+.articles-list {
+  margin-top: 20px;
+}
 
 .instructions {
-  text-align: center;
+  background: #464866;
+  padding: 20px;
   margin: 20px 0;
+  border-radius: 10px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 1.1rem;
 }
+
+.instructions p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
 
 .filter-bar {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
-.article-card {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-bottom: 20px;
+.filter-bar input,
+.filter-bar select {
+  padding: 10px;
+  border: 1px solid #AAABB8;
+  border-radius: 5px;
+  font-size: 1rem;
   width: 100%;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+}
+
+.filter-bar button {
+  background-color: #2E9CCA;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 15px;
   border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+  width: 100%;
+  max-width: 150px;
 }
 
+.filter-bar button:hover {
+  background-color: #29648A;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+  .filter-bar {
+    flex-wrap: nowrap; /* Keep items in one row on larger screens */
+    justify-content: space-between;
+  }
+
+  .filter-bar input,
+  .filter-bar select,
+  .filter-bar button {
+    width: auto; /* Revert to auto width for larger screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .filter-bar input,
+  .filter-bar select,
+  .filter-bar button {
+    width: 100%;
+  }
+}
+
+/* Clear All Button */
+.clear-all-button {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.clear-all-button button {
+  background-color: #AAABB8;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.clear-all-button button:hover {
+  background-color: #464866;
+}
+
+/* Updated Article Card Styling */
+.article-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #ffffff, #f4f4f9);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid #2e9cca;
+  position: relative;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #ffffff, #eaf6fb);
+}
+
+/* Add a decorative corner shadow */
+.article-card:after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Header (Title) Styling */
 .article-card h3 {
-  margin: 0 0 10px;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #2e9cca;
+  font-weight: bold;
+  text-align: center;
 }
 
+/* Content Styling */
 .article-card p {
-  margin: 5px 0;
+  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #464866;
+  text-align: center;
 }
 
+
+/* Button Styling */
 .article-card button {
-  background-color: #007bff;
+  background-color: #2e9cca;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.article-card button:hover {
+  transform: scale(1.1);
+  background-color: #29648a;
+}
+
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  text-align: center;
+}
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #FF7F50;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Search Results Container */
+.search-results-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #F4F4F9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .articles-page {
+    padding: 10px;
+  }
+
+  .filter-bar {
+    gap: 10px;
+  }
+
+  .article-card {
+    padding: 10px;
+  }
+}
+
+.search-results-container h2 {
+  font-size: 1.8rem;
+  color: #2E9CCA;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.back-to-top button {
+  background-color: #2E9CCA;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-top button:hover {
+  background-color: #29648A;
+}
+
+.section-separator {
+  margin: 30px 0;
+  border: 3px solid #aaa;
+}
+/* Styling for View All Buttons Section */
+.view-all-section {
+  text-align: center;
+  margin: 40px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #2E9CCA, #29648A);
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border: 5px solid #AAABB8; /* Bold border for better framing */
+}
+
+.view-all-section p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+
+.view-all-buttons {
+  display: flex;
+  flex-direction: column; /* Stack the buttons vertically */
+  align-items: center; /* Center the buttons */
+  gap: 20px; /* Add more space between buttons */
+}
+
+.view-all-buttons button {
+  width: 220px; /* Adjusted width for better proportion */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: #FF6347; /* Slightly contrasting color */
+  color: #FFFFFF;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.view-all-buttons button:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  background-color: #FF4500; /* Darker hover effect */
+}
+
+
+
+
+/* Pagination styling */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.pagination button {
+  background-color: #464866;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -52,16 +371,26 @@ code {
   cursor: pointer;
 }
 
-.article-card button:hover {
-  background-color: #0056b3;
+.pagination button:hover {
+  background-color: #2e9cca;
 }
 
-.articles-page {
-  padding: 20px;
+footer {
+  margin-top: 30px;
+  text-align: center;
+  padding: 10px;
+  background-color: #25274d;
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 0.9rem;
 }
 
-.pagination {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+footer a {
+  color: #2E9CCA;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }

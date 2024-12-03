@@ -11,15 +11,17 @@ const ArticlesPage = () => {
   const [hasSearched, setHasSearched] = useState(false);
   const [isViewAll, setIsViewAll] = useState(false);
   const [viewAllOrder, setViewAllOrder] = useState("desc");
+  const [loading, setLoading] = useState(false);
 
   // Fetch articles based on filters or view-all settings
   const fetchArticles = async (page = 1, isViewAllMode = false, order = "desc") => {
+    setLoading(true);
     try {
       const params = isViewAllMode
         ? { all: true, page, order }
         : { ...filters, page, limit: 10 };
 
-      const response = await axios.get("/articles", { params });
+      const response = await axios.get("/api/articles", { params });
 
       setArticles(response.data.articles);
       setPagination({
@@ -31,17 +33,21 @@ const ArticlesPage = () => {
       if (isViewAllMode) setViewAllOrder(order);
     } catch (err) {
       console.error("Error fetching articles:", err);
+    } finally {
+      setLoading(false);
     }
   };
 
   // Handle search functionality
   const handleSearch = () => {
+    setPagination({ currentPage: 1, totalPages: 0 }); // Reset pagination
     fetchArticles(1, false); // Fetch articles with filters
   };
 
   // Handle "View All" functionality
   const handleViewAll = (order = "desc") => {
-    fetchArticles(1, true, order); // Fetch all articles
+    setPagination({ currentPage: 1, totalPages: 0 });
+    fetchArticles(1, true, order);
   };
 
   // Handle page changes for pagination
@@ -60,43 +66,92 @@ const ArticlesPage = () => {
 
   return (
     <div className="articles-page">
+      <header className="header">
+        <h1>What Do You Know About COVID-19?</h1>
+        <p>
+          Sharing knowledge and personal experiences to help others make informed
+          decisions for themselves and the world at large.
+        </p>
+      </header>
+  
+      {/* Filter Section */}
       <FilterBar
         filters={filters}
         setFilters={setFilters}
         clearFilters={clearFilters}
         onSearch={handleSearch}
       />
-      <button onClick={() => handleViewAll("asc")}>View All (Ascending)</button>
-      <button onClick={() => handleViewAll("desc")}>View All (Descending)</button>
-
-      {!hasSearched ? (
-        <div className="instructions">
-          <p>Welcome! Use the filters above to search for articles.</p>
-          <ul>
-            <li>Filter by year of publication</li>
-            <li>Filter by category</li>
-            <li>Search for specific keywords</li>
-          </ul>
+      <div className="instructions">
+        <p>Use the filters above to search for articles.</p>
+      </div>
+  
+      {/* View All Section */}
+      <hr className="section-separator" />
+      <div className="view-all-section">
+        <p>Alternatively, view all the articles:</p>
+        <div className="view-all-buttons">
+          <button onClick={() => handleViewAll("asc")}>View All (Ascending)</button>
+          <button onClick={() => handleViewAll("desc")}>View All (Descending)</button>
         </div>
-      ) : (
+      </div>
+  
+      {/* Search Results Section */}
+{hasSearched && (
+  <div className="search-results-container">
+    {loading ? (
+      <div className="loader-container">
+        <div className="loader"></div>
+        <p>Loading articles...</p>
+      </div>
+    ) : articles.length === 0 ? (
+      <p>No articles found. Try adjusting your filters.</p>
+    ) : (
+      <>
+        <h2>Search Results</h2>
         <div className="articles-list">
-          {articles.length > 0 ? (
-            articles.map((article) => (
-              <ArticleCard key={article._id} article={article} />
-            ))
-          ) : (
-            <p>No articles found. Try adjusting your filters.</p>
-          )}
+          {articles.map((article) => (
+            <ArticleCard key={article._id} article={article} />
+          ))}
         </div>
-      )}
-      {hasSearched && pagination.totalPages > 1 && (
-        <Pagination
-          pagination={pagination}
-          onPageChange={handlePageChange}
-        />
-      )}
+      </>
+    )}
+  </div>
+)}
+
+{/* Pagination and Navigation */}
+{hasSearched && pagination.totalPages > 1 && (
+  <>
+    <Pagination pagination={pagination} onPageChange={handlePageChange} />
+    <div className="clear-all-button">
+      <button onClick={clearFilters}>Clear All</button>
+    </div>
+    <div className="back-to-top">
+      <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+        Back to Top
+      </button>
+    </div>
+  </>
+)}
+
+  
+      {/* Footer Section */}
+      <footer className="footer">
+        <p>Acknowledgements: Special thanks to everyone who contributed to this project.</p>
+        <p>
+          <a href="https://github.com/ThatsVie" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>{" "}
+          |{" "}
+          <a href="https://www.whatdoyouknowaboutlove.com" target="_blank" rel="noopener noreferrer">
+            My Website
+          </a>
+        </p>
+      </footer>
     </div>
   );
+  
+
+
 };
 
 export default ArticlesPage;

@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 });
 
 // Articles Route
-app.use("/articles", articlesRouter);
+app.use("/api/articles", articlesRouter);
 
 // Handle 404 for Unhandled Routes
 app.use((req, res) => {

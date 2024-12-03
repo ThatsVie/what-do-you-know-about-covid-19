@@ -4,8 +4,8 @@ const FilterBar = ({ filters, setFilters, clearFilters, onSearch }) => (
   <div className="filter-bar">
     <input
       type="text"
-      placeholder="Search articles..."
-      aria-label="Search articles"
+      placeholder="Search by keyword"
+      aria-label="Search by keyword"
       value={filters.search}
       onChange={(e) => setFilters({ ...filters, search: e.target.value })}
     />
@@ -35,7 +35,7 @@ const FilterBar = ({ filters, setFilters, clearFilters, onSearch }) => (
       <option value="Prevention and Treatment">Prevention and Treatment</option>
       <option value="Pregnancy">Pregnancy</option>
       <option value="COVID-19 and Education"></option>
-      {/* Add more categories */}
+
     </select>
     <button onClick={onSearch}>Search</button>
     <button onClick={clearFilters}>Clear All</button>

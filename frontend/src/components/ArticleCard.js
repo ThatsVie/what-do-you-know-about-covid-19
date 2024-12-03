@@ -25,7 +25,7 @@ const ArticleCard = ({ article }) => (
       <strong>Tags:</strong> {article.tags.join(", ")}
     </p>
     <a href={article.url} target="_blank" rel="noopener noreferrer">
-      <button>Read More</button>
+      <button>View Article</button>
     </a>
   </div>
 );
