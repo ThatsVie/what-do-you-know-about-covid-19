@@ -23,13 +23,16 @@ const getAllArticles = async (req, res) => {
       ];
     }
 
-    // Pagination or "see all"
-    const page = req.query.all === "true" ? 1 : parseInt(req.query.page, 10) || 1;
-    const limit = req.query.all === "true" ? 0 : parseInt(req.query.limit, 10) || 10;
+    // Pagination
+    const page = parseInt(req.query.page, 10) || 1;
+    const limit = parseInt(req.query.limit, 10) || 10;
     const skip = (page - 1) * limit;
 
+    // Sorting
+    const sortOrder = req.query.order === "asc" ? 1 : -1;
+
     const articles = await Article.find(query)
-      .sort({ date_published: -1 }) // Default sorting
+      .sort({ date_published: sortOrder })
       .skip(skip)
       .limit(limit);
 
@@ -39,7 +42,7 @@ const getAllArticles = async (req, res) => {
       articles,
       totalArticles,
       currentPage: page,
-      totalPages: limit ? Math.ceil(totalArticles / limit) : 1,
+      totalPages: Math.ceil(totalArticles / limit),
     });
   } catch (err) {
     console.error("Error fetching articles:", err);
