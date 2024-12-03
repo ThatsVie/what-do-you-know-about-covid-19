@@ -1,0 +1,75 @@
+2024-12-03T20:41:36.743Z [INFO]: Server running on port 4000
+2024-12-03T20:41:37.445Z [INFO]: Connected to MongoDB
+2024-12-03T20:43:06.482Z [INFO]: Server running on port 4000
+2024-12-03T20:43:07.384Z [INFO]: Connected to MongoDB
+2024-12-03T20:43:53.751Z [INFO]: Server running on port 4000
+2024-12-03T20:43:54.402Z [INFO]: Connected to MongoDB
+2024-12-03T20:43:56.011Z [INFO]: Server running on port 4000
+2024-12-03T20:43:56.626Z [INFO]: Connected to MongoDB
+2024-12-03T20:45:42.277Z [INFO]: Server running on port 4000
+2024-12-03T20:45:43.393Z [INFO]: Connected to MongoDB
+2024-12-03T20:51:43.148Z [INFO]: Server running on port 4000
+2024-12-03T20:51:44.010Z [INFO]: Connected to MongoDB
+2024-12-03T20:51:52.007Z [INFO]: Incoming request: GET /api/articles
+2024-12-03T21:00:03.723Z [INFO]: Server running on port 4000
+2024-12-03T21:00:04.566Z [INFO]: Connected to MongoDB
+2024-12-03T21:00:14.846Z [INFO]: Server running on port 4000
+2024-12-03T21:00:15.562Z [INFO]: Connected to MongoDB
+2024-12-03T21:00:19.497Z [INFO]: Incoming request: GET /api/articles
+2024-12-03T21:03:20.429Z [INFO]: Server running on port 4000
+2024-12-03T21:03:21.164Z [INFO]: Connected to MongoDB
+2024-12-03T21:03:29.386Z [INFO]: Server running on port 4000
+2024-12-03T21:03:30.113Z [INFO]: Connected to MongoDB
+2024-12-03T21:03:33.351Z [INFO]: Incoming request: GET /api/articles
+2024-12-03T21:05:39.976Z [INFO]: Server running on port 4000
+2024-12-03T21:05:40.789Z [INFO]: Connected to MongoDB
+2024-12-03T21:05:50.237Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Public+Health+Policy&page=1&limit=10
+2024-12-03T21:06:38.190Z [INFO]: Incoming request: GET /api-docs
+2024-12-03T21:06:38.203Z [INFO]: Incoming request: GET /api-docs/
+2024-12-03T21:06:38.261Z [INFO]: Incoming request: GET /api-docs/swagger-ui.css
+2024-12-03T21:06:38.277Z [INFO]: Incoming request: GET /api-docs/swagger-ui-bundle.js
+2024-12-03T21:06:38.279Z [INFO]: Incoming request: GET /api-docs/swagger-ui-standalone-preset.js
+2024-12-03T21:06:38.281Z [INFO]: Incoming request: GET /api-docs/swagger-ui-init.js
+2024-12-03T21:06:38.530Z [INFO]: Incoming request: GET /api-docs/favicon-32x32.png
+2024-12-03T21:08:32.198Z [INFO]: Server running on port 4000
+2024-12-03T21:08:33.030Z [INFO]: Connected to MongoDB
+2024-12-03T21:13:01.475Z [INFO]: Server running on port 4000
+2024-12-03T21:13:02.329Z [INFO]: Connected to MongoDB
+2024-12-03T21:15:19.968Z [INFO]: Server running on port 4000
+2024-12-03T21:15:20.756Z [INFO]: Connected to MongoDB
+2024-12-03T21:15:22.076Z [INFO]: Server running on port 4000
+2024-12-03T21:15:22.736Z [INFO]: Connected to MongoDB
+2024-12-03T21:18:10.448Z [INFO]: Server running on port 4000
+2024-12-03T21:18:11.198Z [INFO]: Connected to MongoDB
+2024-12-03T21:19:02.690Z [INFO]: Incoming request: GET /api/articles
+2024-12-03T21:19:15.844Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Air+Filtration+and+Purification&page=1&limit=10
+2024-12-03T21:23:48.359Z [INFO]: Server running on port 4000
+2024-12-03T21:23:48.373Z [INFO]: Incoming request: GET /api/articles?page=1&limit=5
+2024-12-03T21:23:49.079Z [INFO]: Connected to MongoDB
+2024-12-03T21:23:49.209Z [INFO]: Incoming request: GET /non-existent-route
+2024-12-03T21:23:49.209Z [WARN]: Route not found: GET /non-existent-route
+2024-12-03T21:40:24.950Z [INFO]: Server running on port 4000
+2024-12-03T21:40:25.021Z [INFO]: Incoming request: GET /api/articles?page=1&limit=5
+2024-12-03T21:40:26.960Z [INFO]: Incoming request: GET /api/articles?search=COVID
+2024-12-03T21:40:27.431Z [INFO]: Connected to MongoDB
+2024-12-03T21:40:28.723Z [INFO]: Incoming request: GET /api/articles?year=2023
+2024-12-03T21:40:28.837Z [INFO]: Incoming request: GET /api/articles?category=Public%20Health%20Policy
+2024-12-03T21:40:28.949Z [INFO]: Incoming request: GET /api/articles?page=1&limit=2
+2024-12-03T21:40:29.064Z [INFO]: Incoming request: GET /api/articles?search=nonexistentkeyword
+2024-12-03T21:40:29.200Z [INFO]: Incoming request: GET /api/articles?page=-1
+2024-12-03T21:40:29.268Z [INFO]: Incoming request: GET /api-docs
+2024-12-03T21:40:29.274Z [INFO]: Incoming request: GET /health
+2024-12-03T21:40:29.280Z [INFO]: Incoming request: GET /non-existent-route
+2024-12-03T21:40:29.281Z [WARN]: Route not found: GET /non-existent-route
+2024-12-03T21:45:51.078Z [INFO]: Server running on port 4000
+2024-12-03T21:45:51.093Z [INFO]: Incoming request: GET /api/articles?search=COVID
+2024-12-03T21:45:52.276Z [INFO]: Connected to MongoDB
+2024-12-03T21:45:52.408Z [INFO]: Incoming request: GET /api/articles?year=2023
+2024-12-03T21:45:52.531Z [INFO]: Incoming request: GET /api/articles?category=Public%20Health%20Policy
+2024-12-03T21:45:52.667Z [INFO]: Incoming request: GET /api/articles?page=1&limit=2
+2024-12-03T21:45:52.779Z [INFO]: Incoming request: GET /api/articles?search=nonexistentkeyword
+2024-12-03T21:45:52.888Z [INFO]: Incoming request: GET /non-existent-route
+2024-12-03T21:45:52.888Z [WARN]: Route not found: GET /non-existent-route
+2024-12-03T21:46:06.718Z [INFO]: Server running on port 4000
+2024-12-03T21:46:08.006Z [INFO]: Connected to MongoDB
+2024-12-03T21:46:21.891Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID+and+Children&page=1&limit=10

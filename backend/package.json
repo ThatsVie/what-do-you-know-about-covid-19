@@ -1,16 +1,21 @@
 {
   "name": "backend",
   "version": "1.0.0",
+  "description": "Backend for the COVID-19 Articles API",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "test": "mocha test/**/*.test.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "COVID-19",
+    "API",
+    "backend",
+    "nodejs"
+  ],
+  "author": "Your Name",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
@@ -20,6 +25,15 @@
     "mongodb": "^6.11.0",
     "mongoose": "^8.8.3",
     "morgan": "^1.10.0",
-    "nodemon": "^3.1.7"
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "chai": "^4.5.0",
+    "jest": "^29.7.0",
+    "mocha": "^11.0.1",
+    "nodemon": "^3.1.7",
+    "supertest": "^7.0.0"
   }
 }
