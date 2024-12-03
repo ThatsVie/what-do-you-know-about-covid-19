@@ -3,6 +3,7 @@ import axios from "../api/axiosConfig";
 import FilterBar from "../components/FilterBar";
 import ArticleCard from "../components/ArticleCard";
 import Pagination from "../components/Pagination";
+import InteractiveBubbles from "../components/InteractiveBubbles";
 
 const ArticlesPage = () => {
   const [filters, setFilters] = useState({ search: "", year: "", category: "" });
@@ -63,17 +64,21 @@ const ArticlesPage = () => {
     setHasSearched(false);
     setIsViewAll(false);
   };
-
+  
   return (
     <div className="articles-page">
       <header className="header">
+      <div className="interactive-bubbles">
+    <InteractiveBubbles />
+  </div>
         <h1>What Do You Know About COVID-19?</h1>
         <p>
           Sharing knowledge and personal experiences to help others make informed
           decisions for themselves and the world at large.
         </p>
       </header>
-  
+
+
       {/* Filter Section */}
       <FilterBar
         filters={filters}
@@ -85,17 +90,7 @@ const ArticlesPage = () => {
         <p>Use the filters above to search for articles.</p>
       </div>
   
-      {/* View All Section */}
-      <hr className="section-separator" />
-      <div className="view-all-section">
-        <p>Alternatively, view all the articles:</p>
-        <div className="view-all-buttons">
-          <button onClick={() => handleViewAll("asc")}>View All (Ascending)</button>
-          <button onClick={() => handleViewAll("desc")}>View All (Descending)</button>
-        </div>
-      </div>
-  
-      {/* Search Results Section */}
+  {/* Search Results Section */}
 {hasSearched && (
   <div className="search-results-container">
     {loading ? (
@@ -132,6 +127,19 @@ const ArticlesPage = () => {
     </div>
   </>
 )}
+      {/* View All Section */}
+      <hr className="section-separator" />
+      <div className="view-all-section">
+        <p>Alternatively, view all the articles:</p>
+        <div className="view-all-buttons">
+          <button onClick={() => handleViewAll("asc")}>View All (Ascending)</button>
+          <button onClick={() => handleViewAll("desc")}>View All (Descending)</button>
+        </div>
+      </div>
+  
+
+
+
 
   
       {/* Footer Section */}
@@ -150,8 +158,6 @@ const ArticlesPage = () => {
     </div>
   );
   
-
-
 };
 
 export default ArticlesPage;

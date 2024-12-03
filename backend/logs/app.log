@@ -73,3 +73,17 @@
 2024-12-03T21:46:06.718Z [INFO]: Server running on port 4000
 2024-12-03T21:46:08.006Z [INFO]: Connected to MongoDB
 2024-12-03T21:46:21.891Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID+and+Children&page=1&limit=10
+2024-12-03T22:09:42.208Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Air+Filtration+and+Purification&page=1&limit=10
+2024-12-03T22:10:16.811Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
+2024-12-03T22:10:59.603Z [INFO]: Incoming request: GET /api/articles?all=true&page=1&order=asc
+2024-12-03T22:11:10.238Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Masking&page=1&limit=10
+2024-12-03T22:11:20.973Z [INFO]: Incoming request: GET /api/articles?all=true&page=1&order=desc
+2024-12-03T22:11:27.225Z [INFO]: Incoming request: GET /api/articles?all=true&page=1&order=asc
+2024-12-03T22:25:13.143Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Public+Health+Policy&page=1&limit=10
+2024-12-03T22:29:18.022Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
+2024-12-03T22:29:22.265Z [INFO]: Incoming request: GET /api/articles?all=true&page=1&order=desc
+2024-12-03T22:33:18.990Z [INFO]: Incoming request: GET /api/articles?all=true&page=1&order=asc
+2024-12-03T22:57:01.567Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
+2024-12-03T22:57:45.610Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
+2024-12-03T23:36:07.833Z [INFO]: Incoming request: GET /api/articles?all=true&page=1&order=asc
+2024-12-03T23:36:19.057Z [INFO]: Incoming request: GET /api/articles?all=true&page=1&order=desc

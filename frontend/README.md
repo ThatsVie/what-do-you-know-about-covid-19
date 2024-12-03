@@ -1,70 +1,49 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Frontend for "What Do You Know About COVID-19?"
 
-## Available Scripts
+This is the frontend repository for the "What Do You Know About COVID-19?" project, a web application designed to fetch and display COVID-19-related articles. The frontend is built with **React** and interacts with a backend API to filter, paginate, and display articles in a user-friendly and responsive interface.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Search & Filters**: Users can search articles by keyword, filter by year, and category.
+- **Pagination**: Supports paginated results for better usability and performance.
+- **View All Options**: Users can view all articles sorted by ascending or descending order.
+- **Responsive Design**: Optimized for viewing on various devices with adaptive layouts.
+- **Interactive UI**: Modern and engaging design with hover effects and button animations.
+- **Accessible Components**: Includes keyboard navigation and ARIA labels for improved accessibility.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Components
+1. FilterBar
+Purpose: Allows users to search by keyword, filter by year, and filter by category.
+Features:
+Responsive design for mobile and desktop.
+Clear All button to reset filters.
+2. ArticleCard
+Purpose: Displays article details in a visually appealing card format.
+Features:
+Shows title, summary, authors, publication date, category, and tags.
+Includes a "View Article" button linking to the full article.
+3. Pagination
+Purpose: Provides navigation for paginated results.
+Features:
+Buttons for next/previous pages.
+Displays the current page and total pages.
 
-### `npm test`
+## API Integration
+The frontend communicates with the backend API to fetch articles and supports the following query parameters:
+search: Search articles by keyword.
+year: Filter articles by publication year.
+category: Filter articles by category.
+page: Specify the page number for pagination.
+limit: Limit the number of articles returned per page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Styling
+Global Theme: The application uses a modern color palette featuring shades of blue, gray, and white.
+Animations: Smooth hover effects and transitions for an interactive experience.
+Responsive Design: Adjusts layout and styling for different screen sizes.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Enhancements
+User Authentication: Add login functionality for personalized user experiences.
+Bookmarking: Allow users to save and manage favorite articles.
+Real-time Updates: Implement WebSockets to display new articles in real-time.
