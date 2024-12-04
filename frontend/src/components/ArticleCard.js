@@ -7,22 +7,50 @@ const formatDate = (dateString) => {
 
 const ArticleCard = ({ article }) => (
   <div className="article-card">
-    <h3>{article.title}</h3>
-    <p>{article.summary}</p>
+    <h3
+      dangerouslySetInnerHTML={{
+        __html: article.title, // Render title with <mark> tags as HTML
+      }}
+    ></h3>
+    <p
+      dangerouslySetInnerHTML={{
+        __html: article.summary, // Render summary with <mark> tags as HTML
+      }}
+    ></p>
     <p>
-      <strong>Author(s):</strong> {article.authors.join(", ")}
+      <strong>Author(s):</strong>{" "}
+      <span
+        dangerouslySetInnerHTML={{
+          __html: article.authors.join(", "), // Render authors with <mark> tags as HTML
+        }}
+      ></span>
     </p>
     <p>
-      <strong>Source:</strong> {article.source}
+      <strong>Source:</strong>{" "}
+      <span
+        dangerouslySetInnerHTML={{
+          __html: article.source, // Render source with <mark> tags as HTML
+        }}
+      ></span>
     </p>
     <p>
       <strong>Published:</strong> {formatDate(article.date_published)}
     </p>
     <p>
-      <strong>Category:</strong> {article.category}
+      <strong>Category:</strong>{" "}
+      <span
+        dangerouslySetInnerHTML={{
+          __html: article.category, // Render category with <mark> tags as HTML
+        }}
+      ></span>
     </p>
     <p>
-      <strong>Tags:</strong> {article.tags.join(", ")}
+      <strong>Tags:</strong>{" "}
+      <span
+        dangerouslySetInnerHTML={{
+          __html: article.tags.join(", "), // Render tags with <mark> tags as HTML
+        }}
+      ></span>
     </p>
     <a href={article.url} target="_blank" rel="noopener noreferrer">
       <button>View Article</button>

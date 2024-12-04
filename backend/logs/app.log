@@ -96,3 +96,46 @@
 2024-12-04T19:02:27.728Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Air+Filtration+and+Purification&page=2&limit=10
 2024-12-04T19:02:52.935Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Air+Filtration+and+Purification&page=3&limit=10
 2024-12-04T19:03:17.961Z [INFO]: Incoming request: GET /api/articles?search=classrooms&year=&category=&page=1&limit=10
+2024-12-04T21:15:18.000Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
+2024-12-04T21:22:44.788Z [INFO]: Server running on port 4000
+2024-12-04T21:22:45.767Z [INFO]: Connected to MongoDB
+2024-12-04T21:23:06.237Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=&page=1&limit=10
+2024-12-04T21:23:44.284Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Public+Health+Policy&page=1&limit=10
+2024-12-04T21:25:47.045Z [INFO]: Server running on port 4000
+2024-12-04T21:25:48.454Z [INFO]: Connected to MongoDB
+2024-12-04T21:25:55.187Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=&page=1&limit=10
+2024-12-04T21:26:54.871Z [INFO]: Server running on port 4000
+2024-12-04T21:26:55.613Z [INFO]: Connected to MongoDB
+2024-12-04T21:27:05.055Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=&page=1&limit=10
+2024-12-04T21:32:10.109Z [INFO]: Server running on port 4000
+2024-12-04T21:32:12.582Z [INFO]: Connected to MongoDB
+2024-12-04T21:32:58.193Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=&page=1&limit=10
+2024-12-04T21:36:05.776Z [INFO]: Server running on port 4000
+2024-12-04T21:36:06.602Z [INFO]: Connected to MongoDB
+2024-12-04T21:45:27.856Z [INFO]: Server running on port 4000
+2024-12-04T21:45:28.613Z [INFO]: Connected to MongoDB
+2024-12-04T21:45:44.446Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=&page=1&limit=10
+2024-12-04T21:46:07.061Z [INFO]: Incoming request: GET /api/articles?search=children&year=2024&category=&page=1&limit=10
+2024-12-04T21:51:37.335Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Indoor+Air+Quality+and+Filtration&page=1&limit=10
+2024-12-04T21:51:50.671Z [INFO]: Incoming request: GET /api/articles?search=&year=2024&category=&page=1&limit=10
+2024-12-04T21:52:54.360Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
+2024-12-04T21:54:12.300Z [INFO]: Incoming request: GET /api/articles?search=school&year=&category=&page=1&limit=10
+2024-12-04T22:00:50.118Z [INFO]: Server running on port 4000
+2024-12-04T22:00:50.880Z [INFO]: Connected to MongoDB
+2024-12-04T22:00:58.726Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
+2024-12-04T22:01:07.077Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=&page=1&limit=10
+2024-12-04T22:01:09.655Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=&page=1&limit=10
+2024-12-04T22:01:40.379Z [INFO]: Server running on port 4000
+2024-12-04T22:01:41.078Z [INFO]: Connected to MongoDB
+2024-12-04T22:02:50.781Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=&page=1&limit=10
+2024-12-04T22:03:23.915Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID+and+Children&page=1&limit=10
+2024-12-04T22:03:29.680Z [INFO]: Incoming request: GET /api/articles?search=&year=2020&category=&page=1&limit=10
+2024-12-04T22:06:50.874Z [INFO]: Server running on port 4000
+2024-12-04T22:06:51.680Z [INFO]: Connected to MongoDB
+2024-12-04T22:06:59.575Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=&page=1&limit=10
+2024-12-04T22:07:24.801Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Public+Health+Policy&page=1&limit=10
+2024-12-04T22:09:13.067Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
+2024-12-04T22:10:55.251Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=&page=1&limit=10
+2024-12-04T22:11:02.338Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
+2024-12-04T22:11:11.337Z [INFO]: Incoming request: GET /api/articles?search=children&year=2024&category=&page=1&limit=10
+2024-12-04T22:11:30.635Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=Prevention+and+Treatment&page=1&limit=10
