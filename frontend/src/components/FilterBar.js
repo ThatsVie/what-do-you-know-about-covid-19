@@ -27,14 +27,15 @@ const FilterBar = ({ filters, setFilters, clearFilters, onSearch }) => (
       onChange={(e) => setFilters({ ...filters, category: e.target.value })}
     >
       <option value="">Category</option>
-      <option value="Air Filtration and Purification">Air Filtration and Purification</option>
+      <option value="Indoor Air Quality and Filtration">Indoor Air Quality and Filtration</option>
       <option value="Long COVID">Long COVID</option>
       <option value="Public Health Policy">Public Health Policy</option>
       <option value="Long COVID and Children">Long COVID and Children</option>
       <option value="Masking">Masking</option>
       <option value="Prevention and Treatment">Prevention and Treatment</option>
       <option value="Pregnancy">Pregnancy</option>
-      <option value="COVID-19 and Education"></option>
+      <option value="COVID-19 and Education">COVID-19 and Education</option>
+      <option value="Advocacy and Resources">Advocacy and Resources</option>
 
     </select>
     <button onClick={onSearch}>Search</button>
