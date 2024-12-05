@@ -139,3 +139,60 @@
 2024-12-04T22:11:02.338Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
 2024-12-04T22:11:11.337Z [INFO]: Incoming request: GET /api/articles?search=children&year=2024&category=&page=1&limit=10
 2024-12-04T22:11:30.635Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=Prevention+and+Treatment&page=1&limit=10
+2024-12-04T22:15:15.301Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=&page=1&limit=10
+2024-12-04T22:17:59.677Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=&page=1&limit=10
+2024-12-04T22:20:02.496Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Public+Health+Policy&page=1&limit=10
+2024-12-04T22:20:10.126Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Prevention+and+Treatment&page=1&limit=10
+2024-12-04T22:25:38.904Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Indoor+Air+Quality+and+Filtration&page=1&limit=10
+2024-12-05T15:10:19.429Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Pregnancy&page=1&limit=10
+2024-12-05T15:10:32.432Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=&page=1&limit=10
+2024-12-05T15:10:57.313Z [INFO]: Incoming request: GET /api/articles?search=&year=2023&category=&page=1&limit=10
+2024-12-05T15:11:14.295Z [INFO]: Incoming request: GET /api/articles?search=An+intersectional+analysis+of+long+COVID+prevalence&year=&category=&page=1&limit=10
+2024-12-05T15:11:24.403Z [INFO]: Incoming request: GET /api/articles?all=true&page=1&order=desc
+2024-12-05T15:15:56.269Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=&page=1&limit=10
+2024-12-05T15:16:40.208Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
+2024-12-05T15:27:43.302Z [INFO]: Incoming request: GET /api-docs/
+2024-12-05T15:27:43.336Z [INFO]: Incoming request: GET /api-docs/swagger-ui.css
+2024-12-05T15:27:43.342Z [INFO]: Incoming request: GET /api-docs/swagger-ui-bundle.js
+2024-12-05T15:27:43.347Z [INFO]: Incoming request: GET /api-docs/swagger-ui-standalone-preset.js
+2024-12-05T15:27:43.353Z [INFO]: Incoming request: GET /api-docs/swagger-ui-init.js
+2024-12-05T15:27:43.616Z [INFO]: Incoming request: GET /api-docs/favicon-32x32.png
+2024-12-05T15:28:55.138Z [INFO]: Incoming request: GET /api-docs/
+2024-12-05T15:28:55.167Z [INFO]: Incoming request: GET /api-docs/swagger-ui-bundle.js
+2024-12-05T15:28:55.169Z [INFO]: Incoming request: GET /api-docs/swagger-ui.css
+2024-12-05T15:28:55.175Z [INFO]: Incoming request: GET /api-docs/swagger-ui-standalone-preset.js
+2024-12-05T15:28:55.176Z [INFO]: Incoming request: GET /api-docs/swagger-ui-init.js
+2024-12-05T15:28:55.312Z [INFO]: Incoming request: GET /api-docs/favicon-32x32.png
+2024-12-05T15:31:44.371Z [INFO]: Server running on port 4000
+2024-12-05T15:31:47.832Z [INFO]: Connected to MongoDB
+2024-12-05T15:31:55.977Z [INFO]: Server running on port 4000
+2024-12-05T15:31:57.562Z [INFO]: Incoming request: GET /api-docs/
+2024-12-05T15:31:57.594Z [INFO]: Incoming request: GET /api-docs/swagger-ui.css
+2024-12-05T15:31:57.600Z [INFO]: Incoming request: GET /api-docs/swagger-ui-bundle.js
+2024-12-05T15:31:57.603Z [INFO]: Incoming request: GET /api-docs/swagger-ui-standalone-preset.js
+2024-12-05T15:31:57.608Z [INFO]: Incoming request: GET /api-docs/swagger-ui-init.js
+2024-12-05T15:31:57.836Z [INFO]: Incoming request: GET /api-docs/favicon-32x32.png
+2024-12-05T15:31:58.310Z [INFO]: Connected to MongoDB
+2024-12-05T15:32:04.157Z [INFO]: Server running on port 4000
+2024-12-05T15:32:06.493Z [INFO]: Connected to MongoDB
+2024-12-05T15:32:08.579Z [INFO]: Incoming request: GET /api-docs/
+2024-12-05T15:32:08.605Z [INFO]: Incoming request: GET /api-docs/swagger-ui.css
+2024-12-05T15:32:08.607Z [INFO]: Incoming request: GET /api-docs/swagger-ui-bundle.js
+2024-12-05T15:32:08.615Z [INFO]: Incoming request: GET /api-docs/swagger-ui-standalone-preset.js
+2024-12-05T15:32:08.617Z [INFO]: Incoming request: GET /api-docs/swagger-ui-init.js
+2024-12-05T15:32:08.800Z [INFO]: Incoming request: GET /api-docs/favicon-32x32.png
+2024-12-05T15:36:14.951Z [INFO]: Incoming request: GET /api/articles?search=children
+2024-12-05T15:36:28.969Z [INFO]: Incoming request: GET /api/articles?search=children
+2024-12-05T15:37:13.631Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
+2024-12-05T15:37:14.376Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
+2024-12-05T15:44:56.798Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Public+Health+Policy&page=1&limit=10
+2024-12-05T15:51:20.404Z [INFO]: Incoming request: GET /api/articles?all=true&page=1&order=asc
+2024-12-05T16:32:30.067Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
+2024-12-05T16:34:33.230Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
+2024-12-05T16:38:39.964Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Masking&page=1&limit=10
+2024-12-05T16:40:30.466Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
+2024-12-05T16:45:22.368Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
+2024-12-05T16:54:00.560Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Masking&page=1&limit=10
+2024-12-05T17:02:39.422Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
+2024-12-05T17:05:48.876Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
+2024-12-05T17:05:53.549Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Masking&page=1&limit=10

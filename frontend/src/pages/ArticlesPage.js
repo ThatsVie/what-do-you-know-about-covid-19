@@ -150,8 +150,8 @@ const ArticlesPage = () => {
             GitHub
           </a>{" "}
           |{" "}
-          <a href="https://www.whatdoyouknowaboutlove.com" target="_blank" rel="noopener noreferrer">
-            My Website
+          <a href="https://www.whatdoyouknowaboutlove.com/viepaula" target="_blank" rel="noopener noreferrer">
+            About the Developer
           </a>
         </p>
       </footer>

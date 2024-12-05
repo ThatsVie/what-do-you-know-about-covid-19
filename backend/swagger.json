@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-      "title": "COVID-19 Articles API",
+      "title": "What Do You Know About COVID-19?",
       "version": "1.0.0",
       "description": "API for fetching articles about COVID-19."
     },
