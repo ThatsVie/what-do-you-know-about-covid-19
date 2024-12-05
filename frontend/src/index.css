@@ -159,10 +159,12 @@ header p {
   width: 100%;
   max-width: 150px;
   border: 3px solid #AAABB8;
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 .filter-bar button:hover {
-  background-color: #DD390E;
+  background-color: #2E9CCA;
+  transform: scale(1.05);
 }
 
 /* Media Queries for Responsive Design */
@@ -209,10 +211,12 @@ header p {
   border: none;
   cursor: pointer;
   border: 3px solid #464866;
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 .clear-all-button button:hover {
-  background-color: #464866;
+  background-color: #2e9cca;
+  transform: scale(1.05);
 }
 
 /* Updated Article Card Styling */
@@ -341,10 +345,11 @@ header p {
 }
 
 .search-results-container h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #2E9CCA;
   text-align: center;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 /* Back to Top Button */
@@ -364,10 +369,12 @@ header p {
   cursor: pointer;
   transition: background-color 0.3s ease;
   border: 3px solid #AAABB8;
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 .back-to-top button:hover {
-  background-color: #DD390E;
+  transform: scale(1.05); 
+  background-color: #2E9CCA;
 }
 
 .section-separator {
@@ -403,24 +410,23 @@ header p {
 }
 
 .view-all-buttons button {
+  background-color: #464866;
+  color: white;
+  border: none;
   width: 220px; 
   padding: 12px 20px;
-  border: none;
   border-radius: 10px;
-  font-size: 1.1rem;
   cursor: pointer;
-  background-color: #DD390E;
-  color: #FFFFFF;
+  border: 3px solid #AAABB8;
   font-weight: bold;
+  cursor: pointer;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s ease, background-color 0.3s ease;
-  border: 3px solid #AAABB8;
 }
 
 .view-all-buttons button:hover {
   transform: scale(1.05); 
-  background-color: #FFCB9A;
-  color: #000000;
+  background-color: #2E9CCA;
 }
 
 /* Pagination styling */
@@ -440,10 +446,12 @@ header p {
   cursor: pointer;
   border: 3px solid #AAABB8;
   font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 .pagination button:hover {
   background-color: #2e9cca;
+  transform: scale(1.05); 
 }
 
 footer {
@@ -469,7 +477,7 @@ footer a:hover {
 }
 
 mark {
-  background-color: #2e9cca;
+  background-color: #77ccf0;
   color: black;
   font-weight: bold;
 }

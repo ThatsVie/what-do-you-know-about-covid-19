@@ -146,10 +146,7 @@ const ArticlesPage = () => {
       <footer className="footer">
         <p>Acknowledgements: Special thanks to everyone who contributed to this project.</p>
         <p>
-          <a href="https://github.com/ThatsVie" target="_blank" rel="noopener noreferrer">
-            GitHub
-          </a>{" "}
-          |{" "}
+          
           <a href="https://www.whatdoyouknowaboutlove.com/viepaula" target="_blank" rel="noopener noreferrer">
             About the Developer
           </a>
