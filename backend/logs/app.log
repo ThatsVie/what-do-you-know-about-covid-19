@@ -222,3 +222,15 @@
 2024-12-06T20:26:39.862Z [INFO]: Incoming request: GET /api/articles?search=covid&year=&category=Pregnancy&page=1&limit=10
 2024-12-06T20:26:52.813Z [INFO]: Incoming request: GET /api/articles?search=covid&year=&category=&page=1&limit=10
 2024-12-06T23:09:31.170Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Indoor+Air+Quality+and+Filtration&page=1&limit=10
+2024-12-06T23:37:58.239Z [INFO]: Incoming request: GET /api/articles?search=Characterizing+Long+COVID+in+Children+and+Adolescents&year=&category=&page=1&limit=10
+2024-12-06T23:38:59.523Z [INFO]: Incoming request: GET /api/articles?search=Characterizing+Long+COVID+in+Children+and+Adolescents&year=&category=&page=1&limit=10
+2024-12-06T23:39:46.673Z [INFO]: Incoming request: GET /api/articles?search=Characterizing+Long+COVID+in+Children+and+Adolescents&year=&category=&page=1&limit=10
+2024-12-06T23:43:15.275Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Children+and+Long+COVID&page=1&limit=10
+2024-12-06T23:45:39.825Z [INFO]: Incoming request: GET /api/articles?search=Characterizing+Long+COVID+in+Children+and+Adolescents&year=&category=Children+and+Long+COVID&page=1&limit=10
+2024-12-06T23:46:07.634Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=&page=1&limit=10
+2024-12-06T23:47:20.347Z [INFO]: Incoming request: GET /api/articles?search=Characterizing+Long+COVID+in+Children+and+Adolescents&year=&category=&page=1&limit=10
+2024-12-06T23:48:41.512Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=&page=1&limit=10
+2024-12-06T23:50:14.171Z [INFO]: Incoming request: GET /api/articles?search=Characterizing+Long+COVID+in+Children+and+Adolescents&year=&category=&page=1&limit=10
+2024-12-06T23:50:30.079Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=&page=1&limit=10
+2024-12-06T23:54:34.812Z [INFO]: Incoming request: GET /api/articles?search=Characterizing+Long+COVID+in+Children+and+Adolescents&year=&category=&page=1&limit=10
+2024-12-06T23:54:49.105Z [INFO]: Incoming request: GET /api/articles?search=Rachel&year=&category=&page=1&limit=10
