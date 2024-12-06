@@ -214,3 +214,4 @@
 2024-12-06T16:58:54.913Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=&page=1&limit=10
 2024-12-06T16:59:13.373Z [INFO]: Incoming request: GET /api/articles?search=&year=2024&category=Masking&page=1&limit=10
 2024-12-06T17:23:08.866Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
+2024-12-06T18:36:18.140Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Masking&page=1&limit=10
