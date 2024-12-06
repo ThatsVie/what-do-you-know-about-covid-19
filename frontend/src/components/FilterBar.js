@@ -22,25 +22,26 @@ const FilterBar = ({ filters, setFilters, clearFilters, onSearch }) => (
         <option value="2021">2021</option>
         <option value="2020">2020</option>
       </select>
+      
       <select
         aria-label="Filter by category"
         value={filters.category}
         onChange={(e) => setFilters({ ...filters, category: e.target.value })}
       >
         <option value="">Category</option>
-        <option value="Indoor Air Quality and Filtration">
-          Indoor Air Quality and Filtration
-        </option>
+        <option value="Indoor Air Quality and Filtration">Indoor Air Quality and Filtration</option>
         <option value="Long COVID">Long COVID</option>
         <option value="Public Health Policy">Public Health Policy</option>
-        <option value="Long COVID and Children">Long COVID and Children</option>
+        <option value="Children and Long COVID">Children and Long COVID</option>
         <option value="Masking">Masking</option>
         <option value="Prevention and Treatment">Prevention and Treatment</option>
         <option value="Pregnancy">Pregnancy</option>
         <option value="COVID-19 and Education">COVID-19 and Education</option>
         <option value="Advocacy and Resources">Advocacy and Resources</option>
+        <option value="Co-Infections and Reactivations">Co-Infections and Reactivations</option>
       </select>
     </div>
+
     <div className="filter-buttons">
       <button onClick={onSearch}>Search</button>
       <button onClick={clearFilters}>Clear All</button>
