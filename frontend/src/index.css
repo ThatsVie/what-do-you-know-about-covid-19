@@ -246,7 +246,7 @@ header p {
 }
 
 .filter-bar button {
-  background-color: #29648A;
+  background: linear-gradient(135deg, #2E9CCA, #29648A);
   color: #FFFFFF;
   font-weight: bold;
   border: none;
@@ -261,7 +261,7 @@ header p {
 }
 
 .filter-bar button:hover {
-  background-color: #2E9CCA;
+  background: linear-gradient(to bottom right, #25274d, #29648a);
   transform: scale(1.05);
 }
 
@@ -324,7 +324,7 @@ header p {
 }
 
 .clear-all-button button:hover {
-  background-color: #2e9cca;
+  background: linear-gradient(135deg, #2E9CCA, #29648A);
   transform: scale(1.05);
 }
 
@@ -383,7 +383,7 @@ header p {
 
 /* Button Styling */
 .article-card button {
-  background-color: #2e9cca;
+  background: linear-gradient(135deg, #2E9CCA, #29648A);
   color: #ffffff;
   font-weight: bold;
   padding: 12px 20px;
@@ -399,7 +399,7 @@ header p {
 
 .article-card button:hover {
   transform: scale(1.1);
-  background-color: #29648a;
+  background: linear-gradient(to bottom right, #25274d, #29648a);
 }
 
 .loader-container {
@@ -413,7 +413,7 @@ header p {
 
 .loader {
   border: 10px solid #f3f3f3;
-  border-top: 10px solid #DD390E;
+  border-top: 10px solid #25274d;
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -465,7 +465,7 @@ header p {
 }
 
 .back-to-top button {
-  background-color: #29648A;
+  background: linear-gradient(to bottom right, #25274d, #29648a);
   color: #FFFFFF;
   font-weight: bold;
   border: none;
@@ -479,7 +479,7 @@ header p {
 
 .back-to-top button:hover {
   transform: scale(1.05); 
-  background-color: #2E9CCA;
+  background: linear-gradient(135deg, #2E9CCA, #29648A);
 }
 
 .section-separator {
@@ -515,7 +515,7 @@ header p {
 }
 
 .view-all-buttons button {
-  background-color: #464866;
+  background: linear-gradient(to bottom right, #25274d, #29648a);
   color: white;
   border: none;
   width: 220px; 
@@ -531,7 +531,7 @@ header p {
 
 .view-all-buttons button:hover {
   transform: scale(1.05); 
-  background-color: #2E9CCA;
+  background: linear-gradient(135deg, #2E9CCA, #29648A);
 }
 
 /* Pagination styling */
@@ -543,7 +543,7 @@ header p {
 }
 
 .pagination button {
-  background-color: #464866;
+  background: linear-gradient(to bottom right, #25274d, #29648a);
   color: white;
   border: none;
   padding: 10px 15px;
@@ -555,7 +555,7 @@ header p {
 }
 
 .pagination button:hover {
-  background-color: #2e9cca;
+  background: linear-gradient(135deg, #2E9CCA, #29648A);
   transform: scale(1.05); 
 }
 

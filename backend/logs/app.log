@@ -234,3 +234,4 @@
 2024-12-06T23:50:30.079Z [INFO]: Incoming request: GET /api/articles?search=children&year=&category=&page=1&limit=10
 2024-12-06T23:54:34.812Z [INFO]: Incoming request: GET /api/articles?search=Characterizing+Long+COVID+in+Children+and+Adolescents&year=&category=&page=1&limit=10
 2024-12-06T23:54:49.105Z [INFO]: Incoming request: GET /api/articles?search=Rachel&year=&category=&page=1&limit=10
+2024-12-06T23:58:55.591Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Masking&page=1&limit=10
