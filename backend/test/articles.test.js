@@ -33,7 +33,7 @@ describe("Articles API", () => {
       .expect((res) => {
         if (
           !res.body.articles.every(
-            (article) => article.category === "Public Health Policy"
+            (article) => article.category === "Public Health"
           )
         ) {
           throw new Error("Category filter not working");
