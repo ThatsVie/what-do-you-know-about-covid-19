@@ -1,7 +1,7 @@
 # Design Writeup
 
 ## Overview
-I are building an educational and informational web application titled "What Do You Know About COVID-19?" that provides curated articles and resources related to COVID-19. It allows users to explore key topics, filter articles by category, year, and keywords, and view evidence-based summaries.
+I am building an educational and informational web application titled "What Do You Know About COVID-19?" that provides curated articles and resources related to COVID-19. It allows users to explore key topics, filter articles by category, year, and keywords, and view evidence-based summaries.
 
 
 ## Features
