@@ -71,11 +71,11 @@ const ArticlesPage = () => {
       <div className="interactive-bubbles">
     <InteractiveBubbles />
   </div>
-        <h1>What Do You Know About COVID-19?</h1>
-        <p>
-          Sharing knowledge and personal experiences to help others make informed
-          decisions for themselves and the world at large.
-        </p>
+  <h1>What Do You Know About COVID-19?</h1>
+  
+  <p>
+    Explore a collection of articles, expert insights, and actionable recommendations on prevention, treatment, and living in a world shaped by COVID-19.
+  </p>
       </header>
 
 
@@ -136,22 +136,65 @@ const ArticlesPage = () => {
           <button onClick={() => handleViewAll("desc")}>View All (Descending)</button>
         </div>
       </div>
-  
 
-
-
-
-  
       {/* Footer Section */}
       <footer className="footer">
-        <p>Acknowledgements: Special thanks to everyone who contributed to this project.</p>
-        <p>
-          
-          <a href="https://www.whatdoyouknowaboutlove.com/viepaula" target="_blank" rel="noopener noreferrer">
-            About the Developer
-          </a>
-        </p>
-      </footer>
+      <p>
+        <button>
+    <a href="https://www.whatdoyouknowaboutlove.com/viepaula" target="_blank" rel="noopener noreferrer">
+      About the Developer
+    </a>
+    </button>
+  </p>
+  <p>
+  If you notice any inaccuracies, errors in citations, or have articles or information to contribute, please email 
+  <a href="mailto:whatdoyouknowaboutcovid19@gmail.com"> WhatDoYouKnowAboutCovid19@gmail.com</a>. 
+</p>
+
+  <p>
+    Thank you to these people and organizations whose resources and knowledge I've learned from and incorporated into this project:
+  </p>
+  <div className="button-container">
+    <button>
+      <a href="https://www.instagram.com/JaydoCovid" target="_blank" rel="noopener noreferrer">
+        Jaydo Covid
+      </a>
+    </button>
+    <button>
+      <a href="https://www.the-sentinel-intelligence.net/author/jessicawildfire/" target="_blank" rel="noopener noreferrer">
+        Jessica Wildfire
+      </a>
+    </button>
+    <button>
+      <a href="https://cleanairclub.org/home" target="_blank" rel="noopener noreferrer">
+        Clean Air Club
+      </a>
+    </button>
+    <button>
+      <a href="https://libguides.mskcc.org/CovidImpacts/Home" target="_blank" rel="noopener noreferrer">
+        Memorial Sloan Kettering Library
+      </a>
+    </button>
+    <button>
+      <a href="https://peoplescdc.org/" target="_blank" rel="noopener noreferrer">
+        People's CDC
+      </a>
+    </button>
+    <button>
+      <a href="https://www.instagram.com/shishi.rose/" target="_blank" rel="noopener noreferrer">
+        ShiShi Rose
+      </a>
+    </button>
+    <button>
+      <a href="https://youhavetoliveyour.life/" target="_blank" rel="noopener noreferrer">
+        Chris
+      </a>
+    </button>
+  </div>
+  
+</footer>
+
+
     </div>
   );
   
