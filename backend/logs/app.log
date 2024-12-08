@@ -4,3 +4,5 @@
 2024-12-08T18:51:01.247Z [INFO]: Incoming request: GET /api/articles?all=true&page=1&order=desc
 2024-12-08T18:51:18.435Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=&page=1&limit=10
 2024-12-08T18:51:27.515Z [INFO]: Incoming request: GET /api/articles?all=true&page=1&order=asc
+2024-12-08T19:35:59.873Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Pregnancy&page=1&limit=10
+2024-12-08T20:01:28.488Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Long+COVID&page=1&limit=10
