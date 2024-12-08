@@ -1,1 +1,6 @@
 2024-12-07T21:27:45.126Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Public+Health&page=1&limit=10
+2024-12-08T18:05:07.556Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Advocacy+and+Resources&page=1&limit=10
+2024-12-08T18:42:21.718Z [INFO]: Incoming request: GET /api/articles?search=&year=2024&category=&page=1&limit=10
+2024-12-08T18:51:01.247Z [INFO]: Incoming request: GET /api/articles?all=true&page=1&order=desc
+2024-12-08T18:51:18.435Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=&page=1&limit=10
+2024-12-08T18:51:27.515Z [INFO]: Incoming request: GET /api/articles?all=true&page=1&order=asc
