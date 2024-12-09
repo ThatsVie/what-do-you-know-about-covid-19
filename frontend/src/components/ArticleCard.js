@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const formatDate = (dateString) => {
-  const options = { year: "numeric", month: "long", day: "numeric" };
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
   return new Date(dateString).toLocaleDateString(undefined, options);
 };
 
@@ -18,15 +18,15 @@ const ArticleCard = ({ article }) => (
       }}
     ></p>
     <p>
-      <strong>Author(s):</strong>{" "}
+      <strong>Author(s):</strong>{' '}
       <span
         dangerouslySetInnerHTML={{
-          __html: article.authors.join(", "), // Render authors with <mark> tags as HTML
+          __html: article.authors.join(', '), // Render authors with <mark> tags as HTML
         }}
       ></span>
     </p>
     <p>
-      <strong>Source:</strong>{" "}
+      <strong>Source:</strong>{' '}
       <span
         dangerouslySetInnerHTML={{
           __html: article.source, // Render source with <mark> tags as HTML
@@ -37,7 +37,7 @@ const ArticleCard = ({ article }) => (
       <strong>Published:</strong> {formatDate(article.date_published)}
     </p>
     <p>
-      <strong>Category:</strong>{" "}
+      <strong>Category:</strong>{' '}
       <span
         dangerouslySetInnerHTML={{
           __html: article.category, // Render category with <mark> tags as HTML
@@ -45,10 +45,10 @@ const ArticleCard = ({ article }) => (
       ></span>
     </p>
     <p>
-      <strong>Tags:</strong>{" "}
+      <strong>Tags:</strong>{' '}
       <span
         dangerouslySetInnerHTML={{
-          __html: article.tags.join(", "), // Render tags with <mark> tags as HTML
+          __html: article.tags.join(', '), // Render tags with <mark> tags as HTML
         }}
       ></span>
     </p>

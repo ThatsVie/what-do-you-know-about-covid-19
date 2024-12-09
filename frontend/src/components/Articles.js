@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import axios from "../api/axiosConfig";
+import React, { useEffect, useState } from 'react';
+import axios from '../api/axiosConfig';
 
 function Articles() {
   const [articles, setArticles] = useState([]);
@@ -8,11 +8,11 @@ function Articles() {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await axios.get("/articles"); // Backend endpoint
+        const response = await axios.get('/articles'); // Backend endpoint
         setArticles(response.data.articles);
         setLoading(false);
       } catch (error) {
-        console.error("Error fetching articles:", error);
+        console.error('Error fetching articles:', error);
         setLoading(false);
       }
     };

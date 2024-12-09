@@ -1,24 +1,24 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
 
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #AAABB8;
+  color: #aaabb8;
   background: linear-gradient(to bottom right, #25274d, #29648a);
 }
 
 header {
-  background: linear-gradient(135deg, #2E9CCA, #29648A);
+  background: linear-gradient(135deg, #2e9cca, #29648a);
   padding: 30px;
   margin-bottom: 20px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
   z-index: 1;
-  border: 5px solid #AAABB8;
+  border: 5px solid #aaabb8;
   font-weight: bold;
 }
 
@@ -29,7 +29,6 @@ header h1 {
 
 header p {
   font-size: 1.2rem;
-
 }
 
 .interactive-bubbles {
@@ -57,7 +56,11 @@ header p {
 
 .bubble {
   position: absolute;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(46, 156, 202, 0.5));
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.8),
+    rgba(46, 156, 202, 0.5)
+  );
   border-radius: 50%;
   pointer-events: none;
   animation-fill-mode: forwards;
@@ -164,16 +167,16 @@ header p {
   padding: 20px;
   margin: 20px auto;
   max-width: 1200px;
-  background: #ffffff; 
+  background: #ffffff;
   border: 10px solid #2e9cca;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .articles-page:before {
-  content: "";
+  content: '';
   position: absolute;
   top: -10px;
   left: -10px;
@@ -189,14 +192,14 @@ header p {
 }
 
 .instructions {
-  background: linear-gradient(135deg, #2E9CCA, #29648A);
+  background: linear-gradient(135deg, #2e9cca, #29648a);
   padding: 20px;
   margin: 20px 0;
   border-radius: 10px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: bold;
-  border: 5px solid #AAABB8;
+  border: 5px solid #aaabb8;
 }
 
 .instructions p {
@@ -221,21 +224,20 @@ header p {
   gap: 15px;
   width: 100%;
   max-width: 800px;
-  
 }
 
 .filter-bar .filter-buttons {
   display: flex;
   justify-content: center;
-  gap: 10px; 
+  gap: 10px;
   width: 100%;
-  max-width: 300px; 
+  max-width: 300px;
 }
 
 .filter-bar input,
 .filter-bar select {
   padding: 10px;
-  border: 3px solid #AAABB8;
+  border: 3px solid #aaabb8;
   border-radius: 5px;
   font-size: 1rem;
   width: 100%;
@@ -244,18 +246,20 @@ header p {
 }
 
 .filter-bar button {
-  background: linear-gradient(135deg, #2E9CCA, #29648A);
-  color: #FFFFFF;
+  background: linear-gradient(135deg, #2e9cca, #29648a);
+  color: #ffffff;
   font-weight: bold;
   border: none;
   padding: 10px 15px;
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
   width: 100%;
   max-width: 150px;
-  border: 3px solid #AAABB8;
+  border: 3px solid #aaabb8;
 }
 
 .filter-bar button:hover {
@@ -310,19 +314,21 @@ header p {
 }
 
 .clear-all-button button {
-  background-color: #AAABB8;
-  color: #FFFFFF;
+  background-color: #aaabb8;
+  color: #ffffff;
   font-weight: bold;
   padding: 10px 20px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
   border: 3px solid #464866;
-  transition: transform 0.2s ease, background-color 0.3s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.3s ease;
 }
 
 .clear-all-button button:hover {
-  background: linear-gradient(135deg, #2E9CCA, #29648A);
+  background: linear-gradient(135deg, #2e9cca, #29648a);
   transform: scale(1.05);
 }
 
@@ -336,7 +342,9 @@ header p {
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   background: linear-gradient(to bottom, #ffffff, #f4f4f9);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   border: 5px solid #2e9cca;
   position: relative;
 }
@@ -376,7 +384,7 @@ header p {
 }
 
 .article-card button {
-  background: linear-gradient(135deg, #2E9CCA, #29648A);
+  background: linear-gradient(135deg, #2e9cca, #29648a);
   color: #ffffff;
   font-weight: bold;
   padding: 12px 20px;
@@ -386,8 +394,10 @@ header p {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
   margin-top: 20px;
   text-align: center;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  border: 3px solid #AAABB8;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+  border: 3px solid #aaabb8;
 }
 
 .article-card button:hover {
@@ -425,10 +435,10 @@ header p {
 .search-results-container {
   margin-top: 30px;
   padding: 20px;
-  background-color: #F4F4F9;
+  background-color: #f4f4f9;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  border: 5px solid #AAABB8;
+  border: 5px solid #aaabb8;
 }
 
 @media (max-width: 768px) {
@@ -443,7 +453,7 @@ header p {
 
 .search-results-container h2 {
   font-size: 2rem;
-  color: #2E9CCA;
+  color: #2e9cca;
   text-align: center;
   margin-bottom: 20px;
   font-weight: bold;
@@ -458,25 +468,27 @@ header p {
 
 .back-to-top button {
   background: linear-gradient(to bottom right, #25274d, #29648a);
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: bold;
   border: none;
   padding: 12px 20px;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  border: 3px solid #AAABB8;
-  transition: transform 0.2s ease, background-color 0.3s ease;
+  border: 3px solid #aaabb8;
+  transition:
+    transform 0.2s ease,
+    background-color 0.3s ease;
 }
 
 .back-to-top button:hover {
-  transform: scale(1.05); 
-  background: linear-gradient(135deg, #2E9CCA, #29648A);
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #2e9cca, #29648a);
 }
 
 .section-separator {
   margin: 30px 0;
-  border: 5px solid #2E9CCA;
+  border: 5px solid #2e9cca;
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
@@ -485,45 +497,47 @@ header p {
   text-align: center;
   margin: 40px 0;
   padding: 20px;
-  background: linear-gradient(135deg, #2E9CCA, #29648A);
+  background: linear-gradient(135deg, #2e9cca, #29648a);
   border-radius: 15px;
   color: white;
   font-weight: bold;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  border: 5px solid #AAABB8;
+  border: 5px solid #aaabb8;
 }
 
 .view-all-section p {
   font-size: 1.5rem;
   margin-bottom: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .view-all-buttons {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  gap: 20px; 
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .view-all-buttons button {
   background: linear-gradient(to bottom right, #25274d, #29648a);
   color: white;
   border: none;
-  width: 220px; 
+  width: 220px;
   padding: 12px 20px;
   border-radius: 10px;
   cursor: pointer;
-  border: 3px solid #AAABB8;
+  border: 3px solid #aaabb8;
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, background-color 0.3s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.3s ease;
 }
 
 .view-all-buttons button:hover {
-  transform: scale(1.05); 
-  background: linear-gradient(135deg, #2E9CCA, #29648A);
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #2e9cca, #29648a);
 }
 
 /* Pagination styling */
@@ -541,37 +555,16 @@ header p {
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
-  border: 3px solid #AAABB8;
+  border: 3px solid #aaabb8;
   font-weight: bold;
-  transition: transform 0.2s ease, background-color 0.3s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.3s ease;
 }
 
 .pagination button:hover {
-  background: linear-gradient(135deg, #2E9CCA, #29648A);
-  transform: scale(1.05); 
-}
-
-footer {
-  margin-top: 30px;
-  text-align: center;
-  padding: 10px;
-  background: linear-gradient(to bottom right, #25274d, #29648a);
-  color: #ffffff;
-  border-radius: 10px;
-  font-size: 0.9rem;
-  border: 5px solid #AAABB8;
-  font-weight: bold;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-footer a {
-  color: #2E9CCA;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-footer a:hover {
-  text-decoration: underline;
+  background: linear-gradient(135deg, #2e9cca, #29648a);
+  transform: scale(1.05);
 }
 
 mark {
@@ -580,3 +573,36 @@ mark {
   line-height: 1.6;
   font-weight: bold;
 }
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #25274d, #29648a);
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: 5px solid #aaabb8;
+  font-weight: bold;
+  line-height: 1.6;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+footer a {
+  color: #2e9cca;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+

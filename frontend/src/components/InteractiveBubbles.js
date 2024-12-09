@@ -1,15 +1,15 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 const InteractiveBubbles = () => {
   useEffect(() => {
-    const bubbleContainer = document.querySelector(".interactive-bubbles");
-    const header = document.querySelector("header");
-    const cursorCircle = document.createElement("div");
-    cursorCircle.className = "cursor-circle";
+    const bubbleContainer = document.querySelector('.interactive-bubbles');
+    const header = document.querySelector('header');
+    const cursorCircle = document.createElement('div');
+    cursorCircle.className = 'cursor-circle';
     document.body.appendChild(cursorCircle);
 
     if (!bubbleContainer || !header) {
-      console.error("Bubble container or header not found.");
+      console.error('Bubble container or header not found.');
       return;
     }
 
@@ -17,8 +17,8 @@ const InteractiveBubbles = () => {
     const createBurstBubbles = () => {
       const bubbleCount = 100;
       for (let i = 0; i < bubbleCount; i++) {
-        const bubble = document.createElement("div");
-        bubble.className = "bubble";
+        const bubble = document.createElement('div');
+        bubble.className = 'bubble';
 
         // Randomize clustered starting position
         const clusterOffsetX = Math.random() * 60 - 30; // Horizontal scatter (-30px to +30px)
@@ -30,8 +30,10 @@ const InteractiveBubbles = () => {
         // Randomize size: extra small, small, and medium
         const sizeCategory = Math.random();
         let size;
-        if (sizeCategory < 0.5) size = 6; // Extra small
-        else if (sizeCategory < 0.8) size = 15; // Small
+        if (sizeCategory < 0.5)
+          size = 6; // Extra small
+        else if (sizeCategory < 0.8)
+          size = 15; // Small
         else size = 20; // Medium (fewer medium-sized)
 
         bubble.style.width = `${size}px`;
@@ -42,16 +44,17 @@ const InteractiveBubbles = () => {
 
         // Randomize animation direction
         const directions = [
-          "bubble-spread-up",
-          "bubble-spread-down",
-          "bubble-spread-left",
-          "bubble-spread-right",
-          "bubble-spread-diagonal-top-left",
-          "bubble-spread-diagonal-bottom-left",
-          "bubble-spread-diagonal-top-right",
-          "bubble-spread-diagonal-bottom-right",
+          'bubble-spread-up',
+          'bubble-spread-down',
+          'bubble-spread-left',
+          'bubble-spread-right',
+          'bubble-spread-diagonal-top-left',
+          'bubble-spread-diagonal-bottom-left',
+          'bubble-spread-diagonal-top-right',
+          'bubble-spread-diagonal-bottom-right',
         ];
-        const randomDirection = directions[Math.floor(Math.random() * directions.length)];
+        const randomDirection =
+          directions[Math.floor(Math.random() * directions.length)];
         bubble.style.animationName = randomDirection;
 
         // Apply animation properties with varied speeds
@@ -62,7 +65,7 @@ const InteractiveBubbles = () => {
         bubbleContainer.appendChild(bubble);
 
         // Remove bubble after animation ends
-        bubble.addEventListener("animationend", () => bubble.remove());
+        bubble.addEventListener('animationend', () => bubble.remove());
       }
     };
 
@@ -73,20 +76,20 @@ const InteractiveBubbles = () => {
     // Cursor interaction logic
     const handleMouseMove = (e) => {
       if (!header.contains(e.target)) {
-        cursorCircle.style.display = "none";
+        cursorCircle.style.display = 'none';
         return;
       }
 
-      cursorCircle.style.display = "block";
+      cursorCircle.style.display = 'block';
       cursorCircle.style.left = `${e.pageX}px`;
       cursorCircle.style.top = `${e.pageY}px`;
 
-      const bubbles = document.querySelectorAll(".bubble");
+      const bubbles = document.querySelectorAll('.bubble');
       bubbles.forEach((bubble) => {
         const rect = bubble.getBoundingClientRect();
         const distance = Math.sqrt(
           (rect.x + rect.width / 2 - e.clientX) ** 2 +
-          (rect.y + rect.height / 2 - e.clientY) ** 2
+            (rect.y + rect.height / 2 - e.clientY) ** 2
         );
 
         if (distance < 50) {
@@ -95,7 +98,8 @@ const InteractiveBubbles = () => {
           if (currentSize > 5) {
             bubble.style.width = `${currentSize / 2}px`;
             bubble.style.height = `${currentSize / 2}px`;
-            bubble.style.transition = "width 0.2s ease-out, height 0.2s ease-out";
+            bubble.style.transition =
+              'width 0.2s ease-out, height 0.2s ease-out';
           } else {
             bubble.remove(); // Remove bubble if it's too small
           }
@@ -104,15 +108,15 @@ const InteractiveBubbles = () => {
     };
 
     const handleMouseLeave = () => {
-      cursorCircle.style.display = "none"; // Hide the spotlight when the cursor leaves the header
+      cursorCircle.style.display = 'none'; // Hide the spotlight when the cursor leaves the header
     };
 
-    document.addEventListener("mousemove", handleMouseMove);
-    header.addEventListener("mouseleave", handleMouseLeave);
+    document.addEventListener('mousemove', handleMouseMove);
+    header.addEventListener('mouseleave', handleMouseLeave);
 
     return () => {
       clearInterval(burstInterval);
-      document.removeEventListener("mousemove", handleMouseMove);
+      document.removeEventListener('mousemove', handleMouseMove);
       cursorCircle.remove();
     };
   }, []);

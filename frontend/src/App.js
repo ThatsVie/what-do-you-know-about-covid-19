@@ -1,6 +1,6 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import ArticlesPage from "./pages/ArticlesPage";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ArticlesPage from './pages/ArticlesPage';
 
 function App() {
   return (

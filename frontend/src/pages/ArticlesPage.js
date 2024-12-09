@@ -1,28 +1,39 @@
-import React, { useState } from "react";
-import axios from "../api/axiosConfig";
-import FilterBar from "../components/FilterBar";
-import ArticleCard from "../components/ArticleCard";
-import Pagination from "../components/Pagination";
-import InteractiveBubbles from "../components/InteractiveBubbles";
+import React, { useState } from 'react';
+import axios from '../api/axiosConfig';
+import FilterBar from '../components/FilterBar';
+import ArticleCard from '../components/ArticleCard';
+import Pagination from '../components/Pagination';
+import InteractiveBubbles from '../components/InteractiveBubbles';
 
 const ArticlesPage = () => {
-  const [filters, setFilters] = useState({ search: "", year: "", category: "" });
+  const [filters, setFilters] = useState({
+    search: '',
+    year: '',
+    category: '',
+  });
   const [articles, setArticles] = useState([]);
-  const [pagination, setPagination] = useState({ currentPage: 1, totalPages: 0 });
+  const [pagination, setPagination] = useState({
+    currentPage: 1,
+    totalPages: 0,
+  });
   const [hasSearched, setHasSearched] = useState(false);
   const [isViewAll, setIsViewAll] = useState(false);
-  const [viewAllOrder, setViewAllOrder] = useState("desc");
+  const [viewAllOrder, setViewAllOrder] = useState('desc');
   const [loading, setLoading] = useState(false);
 
   // Fetch articles based on filters or view-all settings
-  const fetchArticles = async (page = 1, isViewAllMode = false, order = "desc") => {
+  const fetchArticles = async (
+    page = 1,
+    isViewAllMode = false,
+    order = 'desc'
+  ) => {
     setLoading(true);
     try {
       const params = isViewAllMode
         ? { all: true, page, order }
         : { ...filters, page, limit: 10 };
 
-      const response = await axios.get("/api/articles", { params });
+      const response = await axios.get('/api/articles', { params });
 
       setArticles(response.data.articles);
       setPagination({
@@ -33,7 +44,7 @@ const ArticlesPage = () => {
       setIsViewAll(isViewAllMode);
       if (isViewAllMode) setViewAllOrder(order);
     } catch (err) {
-      console.error("Error fetching articles:", err);
+      console.error('Error fetching articles:', err);
     } finally {
       setLoading(false);
     }
@@ -46,7 +57,7 @@ const ArticlesPage = () => {
   };
 
   // Handle "View All" functionality
-  const handleViewAll = (order = "desc") => {
+  const handleViewAll = (order = 'desc') => {
     setPagination({ currentPage: 1, totalPages: 0 });
     fetchArticles(1, true, order);
   };
@@ -58,26 +69,27 @@ const ArticlesPage = () => {
 
   // Clear filters and reset the view
   const clearFilters = () => {
-    setFilters({ search: "", year: "", category: "" });
+    setFilters({ search: '', year: '', category: '' });
     setArticles([]);
     setPagination({ currentPage: 1, totalPages: 0 });
     setHasSearched(false);
     setIsViewAll(false);
   };
-  
+
   return (
     <div className="articles-page">
       <header className="header">
-      <div className="interactive-bubbles">
-    <InteractiveBubbles />
-  </div>
-  <h1>What Do You Know About COVID-19?</h1>
-  
-  <p>
-    Explore a collection of articles, expert insights, and actionable recommendations on prevention, treatment, and living in a world shaped by COVID-19.
-  </p>
-      </header>
+        <div className="interactive-bubbles">
+          <InteractiveBubbles />
+        </div>
+        <h1>What Do You Know About COVID-19?</h1>
 
+        <p>
+          Explore a collection of articles, expert insights, and actionable
+          recommendations on prevention, treatment, and living in a world shaped
+          by COVID-19.
+        </p>
+      </header>
 
       {/* Filter Section */}
       <FilterBar
@@ -89,115 +101,182 @@ const ArticlesPage = () => {
       <div className="instructions">
         <p>Use the filters above to search for articles.</p>
       </div>
-  
-  {/* Search Results Section */}
-{hasSearched && (
-  <div className="search-results-container">
-    {loading ? (
-      <div className="loader-container">
-        <div className="loader"></div>
-        <p>Loading articles...</p>
-      </div>
-    ) : articles.length === 0 ? (
-      <p>No articles found. Try adjusting your filters.</p>
-    ) : (
-      <>
-        <h2>Search Results</h2>
-        <div className="articles-list">
-          {articles.map((article) => (
-            <ArticleCard key={article._id} article={article} />
-          ))}
-        </div>
-      </>
-    )}
-  </div>
-)}
 
-{/* Pagination and Navigation */}
-{hasSearched && pagination.totalPages > 1 && (
-  <>
-    <Pagination pagination={pagination} onPageChange={handlePageChange} />
-    <div className="clear-all-button">
-      <button onClick={clearFilters}>Clear All</button>
-    </div>
-    <div className="back-to-top">
-      <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-        Back to Top
-      </button>
-    </div>
-  </>
-)}
+      {/* Search Results Section */}
+      {hasSearched && (
+        <div className="search-results-container">
+          {loading ? (
+            <div className="loader-container">
+              <div className="loader"></div>
+              <p>Loading articles...</p>
+            </div>
+          ) : articles.length === 0 ? (
+            <p>No articles found. Try adjusting your filters.</p>
+          ) : (
+            <>
+              <h2>Search Results</h2>
+              <div className="articles-list">
+                {articles.map((article) => (
+                  <ArticleCard key={article._id} article={article} />
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      )}
+
+      {/* Pagination and Navigation */}
+      {hasSearched && pagination.totalPages > 1 && (
+        <>
+          <Pagination pagination={pagination} onPageChange={handlePageChange} />
+          <div className="clear-all-button">
+            <button onClick={clearFilters}>Clear All</button>
+          </div>
+          <div className="back-to-top">
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
+              Back to Top
+            </button>
+          </div>
+        </>
+      )}
       {/* View All Section */}
       <hr className="section-separator" />
       <div className="view-all-section">
         <p>Alternatively, view all the articles:</p>
         <div className="view-all-buttons">
-          <button onClick={() => handleViewAll("asc")}>View All (Ascending)</button>
-          <button onClick={() => handleViewAll("desc")}>View All (Descending)</button>
+          <button onClick={() => handleViewAll('asc')}>
+            View All (Ascending)
+          </button>
+          <button onClick={() => handleViewAll('desc')}>
+            View All (Descending)
+          </button>
         </div>
       </div>
 
       {/* Footer Section */}
       <footer className="footer">
-      <p>
+        <p>
+          <button>
+            <a
+              href="https://www.whatdoyouknowaboutlove.com/viepaula"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              About the Developer
+            </a>
+          </button>
+        </p>
+        <p>
+          If you notice any inaccuracies, errors in citations, or have articles
+          or information to contribute, please email
+          <a href="mailto:whatdoyouknowaboutcovid19@gmail.com">
+            {' '}
+            WhatDoYouKnowAboutCovid19@gmail.com
+          </a>
+          .
+        </p>
+        <p>
+          Thank you to these people and organizations whose resources and
+          knowledge I've learned from and incorporated into this project:
+        </p>
+        <div className="button-container">
         <button>
-    <a href="https://www.whatdoyouknowaboutlove.com/viepaula" target="_blank" rel="noopener noreferrer">
-      About the Developer
-    </a>
-    </button>
-  </p>
-  <p>
-  If you notice any inaccuracies, errors in citations, or have articles or information to contribute, please email 
-  <a href="mailto:whatdoyouknowaboutcovid19@gmail.com"> WhatDoYouKnowAboutCovid19@gmail.com</a>. 
-</p>
-
-  <p>
-    Thank you to these people and organizations whose resources and knowledge I've learned from and incorporated into this project:
-  </p>
-  <div className="button-container">
-    <button>
-      <a href="https://www.instagram.com/JaydoCovid" target="_blank" rel="noopener noreferrer">
-        Jaydo Covid
-      </a>
-    </button>
-    <button>
-      <a href="https://www.the-sentinel-intelligence.net/author/jessicawildfire/" target="_blank" rel="noopener noreferrer">
-        Jessica Wildfire
-      </a>
-    </button>
-    <button>
-      <a href="https://cleanairclub.org/home" target="_blank" rel="noopener noreferrer">
-        Clean Air Club
-      </a>
-    </button>
-    <button>
-      <a href="https://libguides.mskcc.org/CovidImpacts/Home" target="_blank" rel="noopener noreferrer">
-        Memorial Sloan Kettering Library
-      </a>
-    </button>
-    <button>
-      <a href="https://peoplescdc.org/" target="_blank" rel="noopener noreferrer">
-        People's CDC
-      </a>
-    </button>
-    <button>
-      <a href="https://www.instagram.com/shishi.rose/" target="_blank" rel="noopener noreferrer">
-        ShiShi Rose
-      </a>
-    </button>
-    <button>
-      <a href="https://youhavetoliveyour.life/" target="_blank" rel="noopener noreferrer">
-        Chris
-      </a>
-    </button>
-  </div>
-  
-</footer>
-
-
+            <a
+              href="https://www.the-sentinel-intelligence.net/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Jessica Wildfire
+            </a>
+          </button>
+          <button>
+            <a
+              href="https://www.instagram.com/JaydoCovid"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Jaydo Covid
+            </a>
+          </button>
+          
+          <button>
+            <a
+              href="https://cleanairclub.org/home"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Clean Air Club
+            </a>
+          </button>
+          <button>
+            <a
+              href="https://libguides.mskcc.org/CovidImpacts/Home"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Memorial Sloan Kettering Library
+            </a>
+          </button>
+          <button>
+            <a
+              href="https://peoplescdc.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              People's CDC
+            </a>
+          </button>
+          <button>
+            <a
+              href="https://www.instagram.com/shishi.rose/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ShiShi Rose
+            </a>
+          </button>
+          <button>
+            <a
+              href="https://youhavetoliveyour.life/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Chris
+            </a>
+          </button>
+          <button>
+            <a
+              href="https://www.instagram.com/thesicktimes/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              The Sick Times
+            </a>
+          </button>
+          <button>
+            <a
+              href="https://www.instagram.com/crutches_and_spice/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Imani Barbarin
+            </a>
+          </button>
+          <button>
+            <a
+              href="https://www.instagram.com/masktogetheramerica/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MaskTogetherAmerica
+            </a>
+          </button>
+        </div>
+      </footer>
     </div>
   );
-  
 };
 
 export default ArticlesPage;
