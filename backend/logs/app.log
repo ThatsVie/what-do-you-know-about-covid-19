@@ -10,3 +10,8 @@
 2024-12-08T22:32:50.406Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Co-Infections+and+Reactivations&page=1&limit=10
 2024-12-08T22:54:35.866Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Advocacy+and+Resources&page=1&limit=10
 2024-12-08T23:59:34.213Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Advocacy+and+Resources&page=1&limit=10
+2024-12-09T00:22:30.691Z [INFO]: Incoming request: GET /api/articles?search=education&year=&category=&page=1&limit=10
+2024-12-09T00:23:37.771Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Public+Health&page=1&limit=10
+2024-12-09T17:15:08.405Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Co-Infections+and+Reactivations&page=1&limit=10
+2024-12-09T17:17:18.103Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=COVID-19+and+Education&page=1&limit=10
+2024-12-09T20:02:34.086Z [INFO]: Incoming request: GET /api/articles?search=Shin-Woo+Kim&year=&category=&page=1&limit=10

@@ -184,7 +184,6 @@ header p {
   z-index: -1;
 }
 
-/* Articles list */
 .articles-list {
   margin-top: 20px;
 }
@@ -327,7 +326,6 @@ header p {
   transform: scale(1.05);
 }
 
-/* Article Card Styling */
 .article-card {
   display: flex;
   flex-direction: column;
@@ -349,7 +347,6 @@ header p {
   background: linear-gradient(to bottom, #ffffff, #eaf6fb);
 }
 
-/* Add a decorative corner shadow */
 .article-card:after {
   content: '';
   position: absolute;
@@ -362,7 +359,6 @@ header p {
   z-index: -1;
 }
 
-/* Header (Title) Styling */
 .article-card h3 {
   font-size: 1.8rem;
   margin-bottom: 15px;
@@ -371,7 +367,6 @@ header p {
   text-align: center;
 }
 
-/* Content Styling */
 .article-card p {
   margin: 10px 0;
   font-size: 1rem;
@@ -380,7 +375,6 @@ header p {
   text-align: center;
 }
 
-/* Button Styling */
 .article-card button {
   background: linear-gradient(135deg, #2E9CCA, #29648A);
   color: #ffffff;
@@ -428,13 +422,12 @@ header p {
   }
 }
 
-/* Search Results Container */
 .search-results-container {
   margin-top: 30px;
   padding: 20px;
   background-color: #F4F4F9;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   border: 5px solid #AAABB8;
 }
 
@@ -568,6 +561,7 @@ footer {
   font-size: 0.9rem;
   border: 5px solid #AAABB8;
   font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 footer a {
