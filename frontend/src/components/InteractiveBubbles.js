@@ -55,7 +55,7 @@ const InteractiveBubbles = () => {
           directions[Math.floor(Math.random() * directions.length)];
         bubble.style.animationName = randomDirection;
 
-        const duration = size === 6 ? 2 : size === 15 ? 3 : 4;
+        const duration = size === 6 ? 4 : size === 15 ? 6 : 8;
         const delay = Math.random() * 0.5;
         bubble.style.animation = `${randomDirection} ${duration}s linear ${delay}s forwards`;
 
