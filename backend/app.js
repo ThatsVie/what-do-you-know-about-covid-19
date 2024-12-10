@@ -21,13 +21,19 @@ const logger = winston.createLogger({
     })
   ),
   transports: [
-    new winston.transports.Console(), // Remove file transport for serverless environment
+    new winston.transports.Console(), // Console logging for serverless environments
   ],
 });
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "*", // Allow all origins for now
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+  })
+);
 app.use(morgan("dev"));
 
 // Logging each request
@@ -36,14 +42,27 @@ app.use((req, res, next) => {
   next();
 });
 
-// MongoDB Connection
-mongoose
-  .connect(process.env.MONGODB_URI)
-  .then(() => logger.info("Connected to MongoDB"))
-  .catch((err) => logger.error("MongoDB connection error:", err));
+// MongoDB Connection with Retry Mechanism
+const connectToMongoDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    logger.info("Connected to MongoDB");
+  } catch (err) {
+    logger.error("MongoDB connection error:", err);
+    setTimeout(connectToMongoDB, 5000); // Retry after 5 seconds
+  }
+};
 
-// Swagger Docs
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+connectToMongoDB();
+
+// Swagger Docs Setup
+app.use("/api-docs", swaggerUi.serve, (req, res) => {
+  res.setHeader("Content-Security-Policy", "script-src 'self'");
+  swaggerUi.setup(swaggerDocument)(req, res);
+});
 
 // Routes
 const articlesRouter = require("./routes/articles");
