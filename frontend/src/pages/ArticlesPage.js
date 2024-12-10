@@ -175,7 +175,6 @@ const ArticlesPage = () => {
             {' '}
             WhatDoYouKnowAboutCovid19@gmail.com
           </a>
-          
         </p>
         <p>
           Thank you to these people and organizations whose resources and
