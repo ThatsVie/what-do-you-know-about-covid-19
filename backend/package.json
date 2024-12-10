@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Backend for the COVID-19 Articles API",
+  "description": "Backend for What Do You Know About COVID-19?",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",

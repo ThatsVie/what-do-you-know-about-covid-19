@@ -52,7 +52,7 @@ app.use("/api/articles", articlesRouter);
 
 // Root Route for Testing
 app.get("/", (req, res) => {
-  res.send("Welcome to the COVID-19 Articles API!");
+  res.send("Welcome to What Do You Know About COVID-19? API!");
 });
 
 // Handle 404 for Unhandled Routes

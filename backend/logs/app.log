@@ -15,3 +15,18 @@
 2024-12-09T17:15:08.405Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Co-Infections+and+Reactivations&page=1&limit=10
 2024-12-09T17:17:18.103Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=COVID-19+and+Education&page=1&limit=10
 2024-12-09T20:02:34.086Z [INFO]: Incoming request: GET /api/articles?search=Shin-Woo+Kim&year=&category=&page=1&limit=10
+2024-12-09T21:07:08.760Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Pending+Categorization&page=1&limit=10
+2024-12-09T21:07:22.504Z [INFO]: Incoming request: GET /api/articles?search=pregnancy&year=&category=&page=1&limit=10
+2024-12-09T21:07:40.815Z [INFO]: Incoming request: GET /api/articles?search=masks&year=&category=&page=1&limit=10
+2024-12-10T17:11:35.155Z [INFO]: Server running on port 4000
+2024-12-10T17:11:36.829Z [INFO]: Connected to MongoDB
+2024-12-10T17:11:39.190Z [INFO]: Server running on port 4000
+2024-12-10T17:11:40.850Z [INFO]: Connected to MongoDB
+2024-12-10T17:19:17.326Z [INFO]: Server running on port 4000
+2024-12-10T17:19:18.222Z [INFO]: Connected to MongoDB
+2024-12-10T17:19:23.624Z [INFO]: Server running on port 4000
+2024-12-10T17:19:24.906Z [INFO]: Connected to MongoDB
+2024-12-10T17:21:43.911Z [INFO]: Server running on port 4000
+2024-12-10T17:21:45.226Z [INFO]: Connected to MongoDB
+2024-12-10T17:22:25.999Z [INFO]: Server running on port 4000
+2024-12-10T17:22:27.315Z [INFO]: Connected to MongoDB
