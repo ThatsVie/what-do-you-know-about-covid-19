@@ -21,26 +21,24 @@ const InteractiveBubbles = () => {
         bubble.className = 'bubble';
 
         // Randomize clustered starting position
-        const clusterOffsetX = Math.random() * 60 - 30; // Horizontal scatter (-30px to +30px)
-        const clusterOffsetY = Math.random() * 60 - 30; // Vertical scatter (-30px to +30px)
+        const clusterOffsetX = Math.random() * 60 - 30;
+        const clusterOffsetY = Math.random() * 60 - 30;
 
-        bubble.style.left = `calc(50% + ${clusterOffsetX}px)`; // Centralized burst origin
-        bubble.style.top = `calc(50% + ${clusterOffsetY}px)`; // Centralized burst origin
+        bubble.style.left = `calc(50% + ${clusterOffsetX}px)`;
+        bubble.style.top = `calc(50% + ${clusterOffsetY}px)`;
 
         // Randomize size: extra small, small, and medium
         const sizeCategory = Math.random();
         let size;
-        if (sizeCategory < 0.5)
-          size = 6; // Extra small
-        else if (sizeCategory < 0.8)
-          size = 15; // Small
-        else size = 20; // Medium (fewer medium-sized)
+        if (sizeCategory < 0.5) size = 6;
+        else if (sizeCategory < 0.8) size = 15;
+        else size = 20;
 
         bubble.style.width = `${size}px`;
         bubble.style.height = `${size}px`;
 
-        // Apply random opacity for germ-like particles
-        bubble.style.opacity = Math.random() * 0.5 + 0.5; // Between 0.5 and 1
+        // Apply random opacity
+        bubble.style.opacity = Math.random() * 0.5 + 0.5;
 
         // Randomize animation direction
         const directions = [
@@ -57,58 +55,54 @@ const InteractiveBubbles = () => {
           directions[Math.floor(Math.random() * directions.length)];
         bubble.style.animationName = randomDirection;
 
-        // Apply animation properties with varied speeds
-        const duration = size === 6 ? 2 : size === 15 ? 3 : 4; // Faster for smaller particles
-        const delay = Math.random() * 0.5; // Slight stagger
+        const duration = size === 6 ? 2 : size === 15 ? 3 : 4;
+        const delay = Math.random() * 0.5;
         bubble.style.animation = `${randomDirection} ${duration}s linear ${delay}s forwards`;
 
         bubbleContainer.appendChild(bubble);
 
-        // Remove bubble after animation ends
         bubble.addEventListener('animationend', () => bubble.remove());
       }
     };
 
-    // Trigger bursts every 2 seconds
     const burstInterval = setInterval(createBurstBubbles, 5000);
-    createBurstBubbles(); // Trigger the first burst immediately
+    createBurstBubbles();
 
     // Cursor interaction logic
     const handleMouseMove = (e) => {
-      if (!header.contains(e.target)) {
-        cursorCircle.style.display = 'none';
-        return;
-      }
+      if (header.contains(e.target)) {
+        cursorCircle.style.display = 'block';
+        cursorCircle.style.left = `${e.pageX}px`;
+        cursorCircle.style.top = `${e.pageY}px`;
 
-      cursorCircle.style.display = 'block';
-      cursorCircle.style.left = `${e.pageX}px`;
-      cursorCircle.style.top = `${e.pageY}px`;
+        const bubbles = document.querySelectorAll('.bubble');
+        bubbles.forEach((bubble) => {
+          const rect = bubble.getBoundingClientRect();
+          const distance = Math.sqrt(
+            (rect.x + rect.width / 2 - e.clientX) ** 2 +
+              (rect.y + rect.height / 2 - e.clientY) ** 2
+          );
 
-      const bubbles = document.querySelectorAll('.bubble');
-      bubbles.forEach((bubble) => {
-        const rect = bubble.getBoundingClientRect();
-        const distance = Math.sqrt(
-          (rect.x + rect.width / 2 - e.clientX) ** 2 +
-            (rect.y + rect.height / 2 - e.clientY) ** 2
-        );
+          if (distance < 50) {
+            const currentSize = parseInt(bubble.style.width, 10);
 
-        if (distance < 50) {
-          const currentSize = parseInt(bubble.style.width, 10);
-
-          if (currentSize > 5) {
-            bubble.style.width = `${currentSize / 2}px`;
-            bubble.style.height = `${currentSize / 2}px`;
-            bubble.style.transition =
-              'width 0.2s ease-out, height 0.2s ease-out';
-          } else {
-            bubble.remove(); // Remove bubble if it's too small
+            if (currentSize > 5) {
+              bubble.style.width = `${currentSize / 2}px`;
+              bubble.style.height = `${currentSize / 2}px`;
+              bubble.style.transition =
+                'width 0.2s ease-out, height 0.2s ease-out';
+            } else {
+              bubble.remove();
+            }
           }
-        }
-      });
+        });
+      } else {
+        cursorCircle.style.display = 'none';
+      }
     };
 
     const handleMouseLeave = () => {
-      cursorCircle.style.display = 'none'; // Hide the spotlight when the cursor leaves the header
+      cursorCircle.style.display = 'none';
     };
 
     document.addEventListener('mousemove', handleMouseMove);
