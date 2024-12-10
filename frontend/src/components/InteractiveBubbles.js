@@ -68,34 +68,39 @@ const InteractiveBubbles = () => {
     const burstInterval = setInterval(createBurstBubbles, 5000);
     createBurstBubbles();
 
-    // Cursor interaction logic
+    // Function to update cursor position
+    const updateCursorPosition = (x, y) => {
+      cursorCircle.style.display = 'block';
+      cursorCircle.style.left = `${x}px`;
+      cursorCircle.style.top = `${y}px`;
+
+      const bubbles = document.querySelectorAll('.bubble');
+      bubbles.forEach((bubble) => {
+        const rect = bubble.getBoundingClientRect();
+        const distance = Math.sqrt(
+          (rect.x + rect.width / 2 - x) ** 2 +
+            (rect.y + rect.height / 2 - y) ** 2
+        );
+
+        if (distance < 50) {
+          const currentSize = parseInt(bubble.style.width, 10);
+
+          if (currentSize > 5) {
+            bubble.style.width = `${currentSize / 2}px`;
+            bubble.style.height = `${currentSize / 2}px`;
+            bubble.style.transition =
+              'width 0.2s ease-out, height 0.2s ease-out';
+          } else {
+            bubble.remove();
+          }
+        }
+      });
+    };
+
+    // Mouse event handlers
     const handleMouseMove = (e) => {
       if (header.contains(e.target)) {
-        cursorCircle.style.display = 'block';
-        cursorCircle.style.left = `${e.pageX}px`;
-        cursorCircle.style.top = `${e.pageY}px`;
-
-        const bubbles = document.querySelectorAll('.bubble');
-        bubbles.forEach((bubble) => {
-          const rect = bubble.getBoundingClientRect();
-          const distance = Math.sqrt(
-            (rect.x + rect.width / 2 - e.clientX) ** 2 +
-              (rect.y + rect.height / 2 - e.clientY) ** 2
-          );
-
-          if (distance < 50) {
-            const currentSize = parseInt(bubble.style.width, 10);
-
-            if (currentSize > 5) {
-              bubble.style.width = `${currentSize / 2}px`;
-              bubble.style.height = `${currentSize / 2}px`;
-              bubble.style.transition =
-                'width 0.2s ease-out, height 0.2s ease-out';
-            } else {
-              bubble.remove();
-            }
-          }
-        });
+        updateCursorPosition(e.pageX, e.pageY);
       } else {
         cursorCircle.style.display = 'none';
       }
@@ -105,12 +110,32 @@ const InteractiveBubbles = () => {
       cursorCircle.style.display = 'none';
     };
 
+    // Touch event handlers
+    const handleTouchMove = (e) => {
+      const touch = e.touches[0];
+      if (header.contains(touch.target)) {
+        updateCursorPosition(touch.pageX, touch.pageY);
+      } else {
+        cursorCircle.style.display = 'none';
+      }
+    };
+
+    const handleTouchEnd = () => {
+      cursorCircle.style.display = 'none';
+    };
+
+    // Attach event listeners
     document.addEventListener('mousemove', handleMouseMove);
     header.addEventListener('mouseleave', handleMouseLeave);
+    document.addEventListener('touchmove', handleTouchMove);
+    document.addEventListener('touchend', handleTouchEnd);
 
     return () => {
       clearInterval(burstInterval);
       document.removeEventListener('mousemove', handleMouseMove);
+      header.removeEventListener('mouseleave', handleMouseLeave);
+      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchend', handleTouchEnd);
       cursorCircle.remove();
     };
   }, []);
