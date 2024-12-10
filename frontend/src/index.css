@@ -586,6 +586,8 @@ footer {
   font-weight: bold;
   line-height: 1.6;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 footer a {
@@ -604,5 +606,12 @@ footer a:hover {
   justify-content: center;
   gap: 15px;
   margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    font-size: 0.8rem; 
+    padding: 15px; 
+  }
 }
 
