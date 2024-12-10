@@ -45,10 +45,7 @@ app.use((req, res, next) => {
 // MongoDB Connection with Retry Mechanism
 const connectToMongoDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(process.env.MONGODB_URI);
     logger.info("Connected to MongoDB");
   } catch (err) {
     logger.error("MongoDB connection error:", err);
@@ -59,10 +56,7 @@ const connectToMongoDB = async () => {
 connectToMongoDB();
 
 // Swagger Docs Setup
-app.use("/api-docs", swaggerUi.serve, (req, res) => {
-  res.setHeader("Content-Security-Policy", "script-src 'self'");
-  swaggerUi.setup(swaggerDocument)(req, res);
-});
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Routes
 const articlesRouter = require("./routes/articles");
