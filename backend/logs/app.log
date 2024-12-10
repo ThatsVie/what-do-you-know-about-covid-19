@@ -30,3 +30,37 @@
 2024-12-10T17:21:45.226Z [INFO]: Connected to MongoDB
 2024-12-10T17:22:25.999Z [INFO]: Server running on port 4000
 2024-12-10T17:22:27.315Z [INFO]: Connected to MongoDB
+2024-12-10T17:42:41.696Z [INFO]: Server running on port 4000
+2024-12-10T17:42:43.262Z [INFO]: Connected to MongoDB
+2024-12-10T17:42:45.705Z [INFO]: Server running on port 4000
+2024-12-10T17:42:47.367Z [INFO]: Connected to MongoDB
+2024-12-10T17:43:56.995Z [INFO]: Incoming request: GET /api/articles?search=&year=2024&category=&page=1&limit=10
+2024-12-10T17:46:40.356Z [INFO]: Server running on port 4000
+2024-12-10T17:46:41.321Z [INFO]: Connected to MongoDB
+2024-12-10T17:53:01.823Z [INFO]: Incoming request: GET /articles
+2024-12-10T17:53:01.825Z [WARN]: Route not found: GET /articles
+2024-12-10T17:53:01.990Z [INFO]: Incoming request: GET /favicon.ico
+2024-12-10T17:53:01.991Z [WARN]: Route not found: GET /favicon.ico
+2024-12-10T17:53:07.412Z [INFO]: Incoming request: GET /api/articles
+2024-12-10T19:32:28.569Z [INFO]: Incoming request: GET /
+2024-12-10T19:38:30.768Z [INFO]: Server running on port 4000
+2024-12-10T19:38:32.925Z [INFO]: Connected to MongoDB
+2024-12-10T19:42:55.054Z [INFO]: Swagger UI running at /api-docs
+2024-12-10T19:42:55.079Z [INFO]: Server running on port 4000
+2024-12-10T19:42:57.399Z [INFO]: Connected to MongoDB
+2024-12-10T19:43:08.856Z [INFO]: Swagger UI running at /api-docs
+2024-12-10T19:43:08.873Z [INFO]: Server running on port 4000
+2024-12-10T19:43:10.173Z [INFO]: Connected to MongoDB
+2024-12-10T19:43:20.180Z [INFO]: Swagger UI running at /api-docs
+2024-12-10T19:43:20.199Z [INFO]: Server running on port 4000
+2024-12-10T19:43:21.941Z [INFO]: Connected to MongoDB
+2024-12-10T19:43:36.849Z [INFO]: Incoming request: GET /api/articles?search=&year=&category=Advocacy+and+Resources&page=1&limit=10
+2024-12-10T19:43:40.744Z [INFO]: Incoming request: GET /
+2024-12-10T19:43:47.114Z [INFO]: Incoming request: GET /api-docs
+2024-12-10T19:43:47.122Z [INFO]: Incoming request: GET /api-docs/
+2024-12-10T19:43:47.158Z [INFO]: Incoming request: GET /api-docs/swagger-ui.css
+2024-12-10T19:43:47.170Z [INFO]: Incoming request: GET /api-docs/swagger-ui-bundle.js
+2024-12-10T19:43:47.177Z [INFO]: Incoming request: GET /api-docs/swagger-ui-standalone-preset.js
+2024-12-10T19:43:47.179Z [INFO]: Incoming request: GET /api-docs/swagger-ui-init.js
+2024-12-10T19:43:47.461Z [INFO]: Incoming request: GET /api-docs/favicon-32x32.png
+2024-12-10T19:43:55.706Z [INFO]: Incoming request: GET /api/articles

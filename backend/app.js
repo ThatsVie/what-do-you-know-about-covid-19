@@ -28,7 +28,23 @@ const logger = winston.createLogger({
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      const allowedOrigins = [
+        process.env.FRONTEND_URL || "http://localhost:3000",
+        "http://localhost:3000",
+      ];
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+  })
+);
 app.use(morgan("dev"));
 
 // Logging each request
@@ -39,12 +55,13 @@ app.use((req, res, next) => {
 
 // MongoDB Connection
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => logger.info("Connected to MongoDB"))
-  .catch((err) => logger.error("MongoDB connection error:", err));
+  .catch((err) => logger.error(`MongoDB connection error: ${err.message}`));
 
 // Swagger Docs
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+logger.info("Swagger UI running at /api-docs");
 
 // Routes
 const articlesRouter = require("./routes/articles");
@@ -53,6 +70,12 @@ app.use("/api/articles", articlesRouter);
 // Root Route for Testing
 app.get("/", (req, res) => {
   res.send("Welcome to What Do You Know About COVID-19? API!");
+});
+
+// Error Handling Middleware
+app.use((err, req, res, next) => {
+  logger.error(`Error: ${err.message}`);
+  res.status(err.status || 500).json({ error: err.message });
 });
 
 // Handle 404 for Unhandled Routes
