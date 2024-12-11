@@ -79,9 +79,8 @@ This project is also dedicated:
 - **To the resilience of those** navigating long COVID and other chronic impacts of this virus.
 - **To everyone who continues to care** for their communities by taking precautions, advocating for justice, and spreading awareness.
 
-### Featured People and Organizations
 
-Thank you to the following people and organizations whose resources and knowledge have shaped this project:
+### Thank you to the following people and organizations whose resources and knowledge have shaped this project:
 
 - [Jessica Wildfire](https://www.the-sentinel-intelligence.net/)
 - [Jaydo Covid](https://www.instagram.com/JaydoCovid)

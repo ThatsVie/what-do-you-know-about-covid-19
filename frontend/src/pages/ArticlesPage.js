@@ -104,25 +104,25 @@ const ArticlesPage = () => {
 
       {/* Search Results Section */}
       {hasSearched && (
-        <div className="search-results-container">
+        <>
+          <h2 className="search-results-heading">Search Results</h2>
           {loading ? (
             <div className="loader-container">
               <div className="loader"></div>
               <p>Loading articles...</p>
             </div>
           ) : articles.length === 0 ? (
-            <p>No articles found. Try adjusting your filters.</p>
+            <p className="no-articles">
+              No articles found. Try adjusting your filters.
+            </p>
           ) : (
-            <>
-              <h2>Search Results</h2>
-              <div className="articles-list">
-                {articles.map((article) => (
-                  <ArticleCard key={article._id} article={article} />
-                ))}
-              </div>
-            </>
+            <div className="articles-list">
+              {articles.map((article) => (
+                <ArticleCard key={article._id} article={article} />
+              ))}
+            </div>
           )}
-        </div>
+        </>
       )}
 
       {/* Pagination and Navigation */}
@@ -155,33 +155,62 @@ const ArticlesPage = () => {
         </div>
       </div>
 
+      {/* Acknowledgments & Dedication Section */}
+      <section className="dedication">
+        <h2>Acknowledgments & Dedication</h2>
+        <p>
+          <strong>In memory of the lives lost and forever changed</strong> by
+          COVID-19.
+        </p>
+        <p>
+          <strong>In recognition of the profound grief</strong> for a world that
+          will never return, for the people we’ve lost, and for the inequities
+          the pandemic has exposed.
+        </p>
+        <p>
+          <strong>To the resilience</strong> of those navigating long COVID and
+          other chronic impacts of this virus.
+        </p>
+        <p>
+          <strong>To everyone who continues to care</strong> for their
+          communities by taking precautions, advocating for justice, and
+          spreading awareness.
+        </p>
+        <p>
+          <strong>With deep gratitude</strong> to the researchers, writers, and
+          organizations whose work is featured on this platform.
+        </p>
+      </section>
+
       {/* Footer Section */}
       <footer className="footer">
-        <p>
-          <button>
-            <a
-              href="https://www.whatdoyouknowaboutlove.com/viepaula"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              About the Developer
-            </a>
-          </button>
-        </p>
-        <p>
-          If you notice any inaccuracies, errors in citations, or have articles
-          or information to contribute, please email
-          <a href="mailto:whatdoyouknowaboutcovid19@gmail.com">
-            {' '}
+        <div className="footer-section">
+          <a
+            href="https://www.whatdoyouknowaboutlove.com/viepaula"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            About the Developer
+          </a>
+        </div>
+        <div className="footer-section">
+          <p>
+            If you notice any inaccuracies, errors in citations, or have
+            articles to contribute, please email:
+          </p>
+          <a
+            href="mailto:whatdoyouknowaboutcovid19@gmail.com"
+            className="email"
+          >
             WhatDoYouKnowAboutCovid19@gmail.com
           </a>
-        </p>
-        <p>
-          Thank you to these people and organizations whose resources and
-          knowledge I've learned from and incorporated into this project:
-        </p>
-        <div className="button-container">
-        <button>
+        </div>
+        <div className="footer-section">
+          <p>
+            Thank you to these people and organizations whose resources and
+            knowledge I've learned from:
+          </p>
+          <div className="button-container">
             <a
               href="https://www.the-sentinel-intelligence.net/"
               target="_blank"
@@ -189,8 +218,6 @@ const ArticlesPage = () => {
             >
               Jessica Wildfire
             </a>
-          </button>
-          <button>
             <a
               href="https://www.instagram.com/JaydoCovid"
               target="_blank"
@@ -198,9 +225,6 @@ const ArticlesPage = () => {
             >
               Jaydo Covid
             </a>
-          </button>
-          
-          <button>
             <a
               href="https://cleanairclub.org/home"
               target="_blank"
@@ -208,8 +232,6 @@ const ArticlesPage = () => {
             >
               Clean Air Club
             </a>
-          </button>
-          <button>
             <a
               href="https://libguides.mskcc.org/CovidImpacts/Home"
               target="_blank"
@@ -217,8 +239,6 @@ const ArticlesPage = () => {
             >
               Memorial Sloan Kettering Library
             </a>
-          </button>
-          <button>
             <a
               href="https://peoplescdc.org/"
               target="_blank"
@@ -226,8 +246,6 @@ const ArticlesPage = () => {
             >
               People's CDC
             </a>
-          </button>
-          <button>
             <a
               href="https://www.instagram.com/shishi.rose/"
               target="_blank"
@@ -235,8 +253,6 @@ const ArticlesPage = () => {
             >
               ShiShi Rose
             </a>
-          </button>
-          <button>
             <a
               href="https://youhavetoliveyour.life/"
               target="_blank"
@@ -244,8 +260,6 @@ const ArticlesPage = () => {
             >
               Chris
             </a>
-          </button>
-          <button>
             <a
               href="https://www.instagram.com/thesicktimes/"
               target="_blank"
@@ -253,8 +267,6 @@ const ArticlesPage = () => {
             >
               The Sick Times
             </a>
-          </button>
-          <button>
             <a
               href="https://www.instagram.com/crutches_and_spice/"
               target="_blank"
@@ -262,8 +274,6 @@ const ArticlesPage = () => {
             >
               Imani Barbarin
             </a>
-          </button>
-          <button>
             <a
               href="https://www.instagram.com/masktogetheramerica/"
               target="_blank"
@@ -271,7 +281,7 @@ const ArticlesPage = () => {
             >
               MaskTogetherAmerica
             </a>
-          </button>
+          </div>
         </div>
       </footer>
     </div>

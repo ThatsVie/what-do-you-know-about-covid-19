@@ -16,18 +16,18 @@ This is the frontend repository for the "What Do You Know About COVID-19?" proje
 1. FilterBar
    - Purpose: Allows users to search by keyword, filter by year, and filter by category.
    - Features:
-      - Responsive design for mobile and desktop.
-      - Clear All button to reset filters.
+     - Responsive design for mobile and desktop.
+     - Clear All button to reset filters.
 2. ArticleCard
    - Purpose: Displays article details in a visually appealing card format.
    - Features:
-      - Shows title, summary, authors, publication date, category, and tags.
-      - Includes a "View Article" button linking to the full article.
+     - Shows title, summary, authors, publication date, category, and tags.
+     - Includes a "View Article" button linking to the full article.
 3. Pagination
    - Purpose: Provides navigation for paginated results.
    - Features:
-      - Buttons for next/previous pages.
-      - Displays the current page and total pages.
+     - Buttons for next/previous pages.
+     - Displays the current page and total pages.
 
 ## API Integration
 
