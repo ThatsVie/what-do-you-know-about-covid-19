@@ -190,6 +190,7 @@ header p {
   color: #ffffff;
   font-weight: bold;
   border: 5px solid #aaabb8;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .instructions p {
@@ -491,6 +492,7 @@ header p {
   font-weight: bold;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   border: 5px solid #aaabb8;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .view-all-section p {
