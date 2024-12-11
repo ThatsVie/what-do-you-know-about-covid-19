@@ -656,6 +656,14 @@ footer a:hover {
 .email {
   margin-top: 10px;
   font-size: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 12px 20px;
+  background: linear-gradient(to bottom right, #25274d, #29648a);
+  border-radius: 10px;
 }
 
 .button-container {
@@ -679,5 +687,10 @@ footer a:hover {
 
   .button-container {
     gap: 10px;
+  }
+
+  .email {
+    padding: 10px 15px;
+    font-size: 0.9rem;
   }
 }
