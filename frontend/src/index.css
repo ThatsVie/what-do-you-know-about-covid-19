@@ -694,3 +694,9 @@ footer a:hover {
     font-size: 0.9rem;
   }
 }
+
+/* Apply a yellow outline to all focusable elements */
+:focus {
+  outline: 2px solid #f1c40f;
+  outline-offset: 2px;
+}
