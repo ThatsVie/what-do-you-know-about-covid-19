@@ -373,24 +373,23 @@ header p {
   text-align: center;
 }
 
-.article-card button {
-  background: linear-gradient(135deg, #2e9cca, #29648a);
+.button-link {
+  display: inline-block;
+  text-decoration: none;
   color: #ffffff;
+  background: linear-gradient(135deg, #2e9cca, #29648a);
   font-weight: bold;
   padding: 12px 20px;
-  border: none;
   border-radius: 10px;
   cursor: pointer;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
   margin-top: 20px;
   text-align: center;
-  transition:
-    transform 0.3s ease,
-    background-color 0.3s ease;
   border: 3px solid #aaabb8;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.article-card button:hover {
+.button-link:hover {
   transform: scale(1.1);
   background: linear-gradient(to bottom right, #25274d, #29648a);
 }
