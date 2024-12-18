@@ -1,8 +1,17 @@
 import React from 'react';
 
+// Format date using UTC components to avoid timezone discrepancies
 const formatDate = (dateString) => {
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  return new Date(dateString).toLocaleDateString(undefined, options);
+  if (!dateString) return 'Unknown Date'; // Handle missing dates
+
+  const date = new Date(dateString);
+
+  // Extract the UTC components of the date
+  const year = date.getUTCFullYear();
+  const month = date.toLocaleString('default', { month: 'long', timeZone: 'UTC' });
+  const day = date.getUTCDate();
+
+  return `${month} ${day}, ${year}`; // Format as "Month Day, Year"
 };
 
 const ArticleCard = ({ article }) => (
