@@ -31,14 +31,11 @@ const FilterBar = ({ filters, setFilters, clearFilters, onSearch }) => (
         <option value="">Category</option>
         <option value="Advocacy and Resources">Advocacy and Resources</option>
         <option value="Children and Long COVID">Children and Long COVID</option>
-        <option value="Indoor Air Quality and Filtration">
-          Indoor Air Quality and Filtration
-        </option>
+        <option value="Far-UVC">Far-UVC</option>
+        <option value="Indoor Air Quality and Filtration">Indoor Air Quality and Filtration</option>
         <option value="Long COVID">Long COVID</option>
         <option value="Masking">Masking</option>
-        <option value="Prevention and Treatment">
-          Prevention and Treatment
-        </option>
+        <option value="Prevention and Treatment">Prevention and Treatment</option>
         <option value="Public Health">Public Health</option>
         <option value="Pending Categorization">Pending Categorization</option>
       </select>
