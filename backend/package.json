@@ -14,7 +14,7 @@
     "backend",
     "nodejs"
   ],
-  "author": "Your Name",
+  "author": "Vie P.",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.3",

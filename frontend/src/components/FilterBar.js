@@ -39,6 +39,7 @@ const FilterBar = ({ filters, setFilters, clearFilters, onSearch }) => (
         <option value="Public Health">Public Health</option>
         <option value="Testing and Diagnostics">Testing and Diagnostics</option>
         <option value="Vaccines">Vaccines</option>
+        <option value="Veterinary Health">Veterinary Health</option>
         <option value="Pending Categorization">Pending Categorization</option>
       </select>
     </div>
