@@ -562,6 +562,10 @@ mark {
   font-weight: bold;
 }
 
+::selection {
+  background: #f0e68c;
+}
+
 .dedication {
   background: linear-gradient(135deg, #2e9cca, #29648a);
   color: #ffffff;
