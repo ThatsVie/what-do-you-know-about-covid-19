@@ -281,6 +281,13 @@ const ArticlesPage = () => {
             >
               MaskTogetherAmerica
             </a>
+            <a
+              href="https://www.patreon.com/violetblue"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Violet Blue
+            </a>
           </div>
         </div>
       </footer>
