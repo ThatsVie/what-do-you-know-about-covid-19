@@ -69,7 +69,7 @@ const InteractiveBubbles = () => {
       }
     };
 
-    const burstInterval = setInterval(createBurstBubbles, 5000);
+    const burstInterval = setInterval(createBurstBubbles, 10000);
     createBurstBubbles();
 
     // Function to update cursor position and provide haptic feedback
