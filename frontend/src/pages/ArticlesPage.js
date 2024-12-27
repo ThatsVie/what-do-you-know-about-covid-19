@@ -83,9 +83,8 @@ const ArticlesPage = () => {
           <InteractiveBubbles />
         </div>
         <h1>What Do You Know About COVID-19?</h1>
-
         <p>
-        Search through an ever-growing database of articles, expert insights, and practical advice. This comprehensive collection explores the multifaceted impacts of COVID-19, covering topics like Advocacy and Resources, Children, Animals, Long COVID, Vaccines, and more. From prevention and treatment to masking, testing, indoor air quality, and the latest science, find trusted information to empower individuals, families, and communities in navigating the challenges of our evolving world.
+        Empowering individuals, families, and communities with trusted information to navigate an evolving world shaped by COVID-19.
         </p>
       </header>
 
