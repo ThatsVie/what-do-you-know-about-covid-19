@@ -30,6 +30,7 @@ const FilterBar = ({ filters, setFilters, clearFilters, onSearch }) => (
       >
         <option value="">Category</option>
         <option value="Advocacy and Resources">Advocacy and Resources</option>
+        <option value="Animals">Animals</option>
         <option value="Children">Children</option>
         <option value="Far-UVC">Far-UVC</option>
         <option value="Indoor Air Quality and Filtration">Indoor Air Quality and Filtration</option>
@@ -39,7 +40,6 @@ const FilterBar = ({ filters, setFilters, clearFilters, onSearch }) => (
         <option value="Public Health">Public Health</option>
         <option value="Testing and Diagnostics">Testing and Diagnostics</option>
         <option value="Vaccines">Vaccines</option>
-        <option value="Veterinary Health">Veterinary Health</option>
       </select>
     </div>
 
