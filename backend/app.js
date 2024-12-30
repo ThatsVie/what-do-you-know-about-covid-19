@@ -3,53 +3,40 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const morgan = require("morgan");
-const swaggerUi = require("swagger-ui-express");
-const swaggerDocument = require("./swagger.json");
-const winston = require("winston");
+const rateLimit = require("express-rate-limit");
 require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-// Winston Logger
-const logger = winston.createLogger({
-  level: "info",
-  format: winston.format.combine(
-    winston.format.timestamp(),
-    winston.format.printf(({ timestamp, level, message }) => {
-      return `${timestamp} [${level.toUpperCase()}]: ${message}`;
-    })
-  ),
-  transports: [
-    new winston.transports.Console(), // Console logging for serverless environments
-  ],
-});
-
 // Middleware
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: (origin, callback) => {
-      const allowedOrigins = [
-        process.env.FRONTEND_URL || "http://localhost:3000",
-        "http://localhost:3000",
-      ];
-
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
+    origin: process.env.FRONTEND_URL || "http://localhost:3000",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
   })
 );
 app.use(morgan("dev"));
 
-// Logging each request
-app.use((req, res, next) => {
-  logger.info(`Incoming request: ${req.method} ${req.url}`);
+// Rate Limiting
+const apiLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // Limit each IP to 100 requests per window
+  message: "Too many requests, please try again later.",
+});
+app.use("/api", apiLimiter);
+
+// API Key Protection for Sensitive Routes
+app.use("/api/articles", (req, res, next) => {
+  const sensitiveMethods = ["POST", "PUT", "PATCH", "DELETE"];
+  if (sensitiveMethods.includes(req.method)) {
+    const apiKey = req.headers["x-api-key"];
+    if (apiKey !== process.env.API_KEY) {
+      return res.status(403).json({ error: "Forbidden: Invalid API Key" });
+    }
+  }
   next();
 });
 
@@ -57,17 +44,14 @@ app.use((req, res, next) => {
 const connectToMongoDB = async () => {
   try {
     await mongoose.connect(process.env.MONGODB_URI);
-    logger.info("Connected to MongoDB");
+    console.log("Connected to MongoDB");
   } catch (err) {
-    logger.error("MongoDB connection error:", err);
+    console.error("MongoDB connection error:", err);
     setTimeout(connectToMongoDB, 5000); // Retry after 5 seconds
   }
 };
 
 connectToMongoDB();
-
-// Swagger Docs Setup
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Routes
 const articlesRouter = require("./routes/articles");
@@ -80,13 +64,13 @@ app.get("/", (req, res) => {
 
 // Handle 404 for Unhandled Routes
 app.use((req, res) => {
-  logger.warn(`Route not found: ${req.method} ${req.originalUrl}`);
+  console.warn(`Route not found: ${req.method} ${req.originalUrl}`);
   res.status(404).json({ error: "Route not found" });
 });
 
 // Start Server
 app.listen(PORT, () => {
-  logger.info(`Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
 
 module.exports = app;
