@@ -25,7 +25,6 @@ Visit the live site: **[What Do You Know About COVID-19?](https://www.whatdoyouk
 ### Backend
 - **Node.js/Express**: REST API for data management.
 - **MongoDB**: Database for storing and retrieving articles.
-- **Winston**: Previously used for structured logging (currently limited in the deployment).
 
 ---
 
@@ -56,13 +55,6 @@ Visit the live site: **[What Do You Know About COVID-19?](https://www.whatdoyouk
 - Handles API requests for articles.
 - Offers filtering by keywords, year, and category, with paginated results.
 
----
-
-
-## Current Limitations
-
-1. **Swagger Documentation**: Currently works locally but is not functional on the deployed site.
-2. **Logging**: File-based logging was disabled due to deployment conflicts with Vercel. Logs are not currently accessible but restoring logging functionality is a priority.
 
 ---
 
