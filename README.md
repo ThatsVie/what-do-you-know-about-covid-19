@@ -99,5 +99,6 @@ This project is also dedicated:
 - [The Sick Times](https://www.instagram.com/thesicktimes/)
 - [Imani Barbarin](https://www.instagram.com/crutches_and_spice/)
 - [MaskTogetherAmerica](https://www.instagram.com/masktogetheramerica/)
+- [Violet Blue](https://www.patreon.com/violetblue)
 
 Your contributions have not only informed this project but also inspired its mission. Thank you for your courage and dedication.

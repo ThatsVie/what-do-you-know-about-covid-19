@@ -287,6 +287,8 @@ const ArticlesPage = () => {
             </a>
           </div>
         </div>
+        <p>Your contributions have not only informed this project but also inspired its mission. Thank you for your courage and dedication.
+        </p>
       </footer>
     </div>
   );
