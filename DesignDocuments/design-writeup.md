@@ -17,7 +17,7 @@ I am building an educational and informational web application titled "What Do Y
 - **Styling:** CSS (or Tailwind/Bootstrap)
 - **Hosting:** Vercel (Frontend and Backend)
 - **API Documentation:** Postman for API testing
-- **Wireframing Tools:** Figma or Balsamiq
+
 
 ## Development Time Estimation
 | Task                         | Expected Time   |

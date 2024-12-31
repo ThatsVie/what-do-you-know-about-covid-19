@@ -25,7 +25,7 @@ Visit the live site: **[What Do You Know About COVID-19?](https://www.whatdoyouk
 ### Backend
 - **Node.js/Express**: REST API for data management.
 - **MongoDB**: Database for storing and retrieving articles.
-
+- **Python Scripts**: Supporting tasks for database maintenance and data cleaning.
 ---
 
 ## Features
