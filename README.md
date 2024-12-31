@@ -1,7 +1,9 @@
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/a7286523-bcfe-4eb9-9eb2-048eb2bddb46" alt="WhatDoYouKnowAboutCovid19">
-  
+ 
+[![GIF](https://media.giphy.com/media/2Gkj4iNoOpccvKvoJ0/giphy.gif)](https://giphy.com/gifs/2Gkj4iNoOpccvKvoJ0)
+
+
   # What Do You Know About COVID-19?
 
   Welcome to **"What Do You Know About COVID-19?"**, a project born out of a deep commitment to public health, education, and advocacy. This web application provides a collection of articles about COVID-19, aiming to equip people with reliable information to better understand the ongoing pandemic and make informed decisions.
