@@ -285,6 +285,13 @@ const ArticlesPage = () => {
             >
               Violet Blue
             </a>
+            <a
+              href="https://www.instagram.com/lizzie_traveler_public/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Lizzie
+            </a>
           </div>
         </div>
         <p>Your contributions have not only informed this project but also inspired its mission. Thank you for your courage and dedication.
