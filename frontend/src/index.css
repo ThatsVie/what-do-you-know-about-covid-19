@@ -240,7 +240,6 @@ header p {
   background: linear-gradient(135deg, #2e9cca, #29648a);
   color: #ffffff;
   font-weight: bold;
-  border: none;
   padding: 10px 15px;
   border-radius: 8px;
   cursor: pointer;
@@ -310,7 +309,6 @@ header p {
   font-weight: bold;
   padding: 10px 20px;
   border-radius: 8px;
-  border: none;
   cursor: pointer;
   border: 3px solid #464866;
   transition:
@@ -426,9 +424,11 @@ header p {
   font-size: 2rem;
   color: #ffffff;
   text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   margin: 20px 0;
   font-weight: bold;
 }
+
 
 @media (max-width: 768px) {
   .search-results-heading {
@@ -458,7 +458,6 @@ header p {
   background: linear-gradient(to bottom right, #25274d, #29648a);
   color: #ffffff;
   font-weight: bold;
-  border: none;
   padding: 12px 20px;
   border-radius: 8px;
   cursor: pointer;
@@ -539,7 +538,6 @@ header p {
 .pagination button {
   background: linear-gradient(to bottom right, #25274d, #29648a);
   color: white;
-  border: none;
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;

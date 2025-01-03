@@ -96,7 +96,9 @@ const ArticlesPage = () => {
         onSearch={handleSearch}
       />
       <div className="instructions">
-        <p>Use the filters above to search for articles.</p>
+      <p>
+      Use the search options above to find articles, studies, and informational resources. You can search by keyword, year, category, or any combination of these.
+      </p>
       </div>
 
       {/* Search Results Section */}
@@ -138,17 +140,18 @@ const ArticlesPage = () => {
           </div>
         </>
       )}
+      
       {/* View All Section */}
       <hr className="section-separator" />
-      <div className="view-all-section">
-        <p>Alternatively, view all the articles:</p>
+      <div className="view-all-section">    
+      <p>Alternatively, explore the entire collection of articles, studies, and resources:</p>
         <div className="view-all-buttons">
-          <button onClick={() => handleViewAll('asc')}>
-            View All (Ascending)
-          </button>
-          <button onClick={() => handleViewAll('desc')}>
-            View All (Descending)
-          </button>
+        <button onClick={() => handleViewAll('asc')}>
+        View All (Oldest First)
+        </button>
+        <button onClick={() => handleViewAll('desc')}>
+        View All (Newest First)
+        </button>
         </div>
       </div>
 

@@ -14,7 +14,12 @@ const formatDate = (dateString) => {
 
 const ArticleCard = ({ article }) => (
   <div className="article-card">
-    <h3 dangerouslySetInnerHTML={{ __html: article.title }}></h3>
+    <h3
+      style={{
+        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)',
+      }}
+      dangerouslySetInnerHTML={{ __html: article.title }}
+    ></h3>
     <p dangerouslySetInnerHTML={{ __html: article.summary }}></p>
     <p>
       <strong>Author(s):</strong>{' '}
@@ -35,14 +40,13 @@ const ArticleCard = ({ article }) => (
       <strong>Tags:</strong>{' '}
       <span dangerouslySetInnerHTML={{ __html: article.tags.join(', ') }}></span>
     </p>
-    {/* Style the <a> tag to look like a button */}
     <a
       href={article.url}
       target="_blank"
       rel="noopener noreferrer"
       className="button-link"
     >
-      View Article
+      Link
     </a>
   </div>
 );

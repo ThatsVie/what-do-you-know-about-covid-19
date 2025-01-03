@@ -6,12 +6,12 @@ const FilterBar = ({ filters, setFilters, clearFilters, onSearch }) => (
       <input
         type="text"
         placeholder="Search by keyword"
-        aria-label="Search by keyword"
+        aria-label="Search by keyword and/or"
         value={filters.search}
         onChange={(e) => setFilters({ ...filters, search: e.target.value })}
       />
       <select
-        aria-label="Filter by year"
+        aria-label="Filter by year and/or"
         value={filters.year}
         onChange={(e) => setFilters({ ...filters, year: e.target.value })}
       >
@@ -25,7 +25,7 @@ const FilterBar = ({ filters, setFilters, clearFilters, onSearch }) => (
       </select>
 
       <select
-        aria-label="Filter by category"
+        aria-label="Filter by category and/or"
         value={filters.category}
         onChange={(e) => setFilters({ ...filters, category: e.target.value })}
       >
