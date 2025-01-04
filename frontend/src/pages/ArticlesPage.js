@@ -97,7 +97,7 @@ const ArticlesPage = () => {
       />
       <div className="instructions">
       <p>
-      Use the search options above to find articles, studies, and informational resources. You can search by keyword, year, category, or any combination of these.
+      Use the search options above to find articles, studies, and other valuable insights. You can search by keyword, year, category, or any combination of these.
       </p>
       </div>
 
@@ -144,7 +144,7 @@ const ArticlesPage = () => {
       {/* View All Section */}
       <hr className="section-separator" />
       <div className="view-all-section">    
-      <p>Alternatively, explore the entire collection of articles, studies, and resources:</p>
+      <p>Browse the entire collection:</p>
         <div className="view-all-buttons">
         <button onClick={() => handleViewAll('asc')}>
         View All (Oldest First)
