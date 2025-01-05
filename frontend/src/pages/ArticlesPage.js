@@ -56,6 +56,16 @@ const ArticlesPage = () => {
     fetchArticles(1, false); // Fetch articles with filters
   };
 
+  // Scroll to the search results heading after the search is triggered
+  setTimeout(() => {
+    const searchResultsHeading = document.querySelector('.search-results-heading');
+    if (searchResultsHeading) {
+      const topPosition = searchResultsHeading.getBoundingClientRect().top + window.scrollY - 20;
+      window.scrollTo({ top: topPosition, behavior: 'smooth' });
+    }
+  }, 100); // Timeout ensures the DOM is updated before scrolling
+
+
   // Handle "View All" functionality
   const handleViewAll = (order = 'desc') => {
     setPagination({ currentPage: 1, totalPages: 0 });

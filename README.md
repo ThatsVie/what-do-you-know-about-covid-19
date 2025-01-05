@@ -94,5 +94,6 @@ This project is also dedicated:
 - [Imani Barbarin](https://www.instagram.com/crutches_and_spice/)
 - [MaskTogetherAmerica](https://www.instagram.com/masktogetheramerica/)
 - [Violet Blue](https://www.patreon.com/violetblue)
+- [Lizzie](https://www.instagram.com/lizzie_traveler_public/)
 
 Your contributions have not only informed this project but also inspired its mission. Thank you for your courage and dedication.
