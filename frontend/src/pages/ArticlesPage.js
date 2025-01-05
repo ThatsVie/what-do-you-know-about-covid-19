@@ -305,6 +305,13 @@ const ArticlesPage = () => {
             >
               Lizzie
             </a>
+            <a
+              href="https://www.thegauntlet.news/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Julia Doubleday
+            </a>
           </div>
         </div>
         <p>Your contributions have not only informed this project but also inspired its mission. Thank you for your courage and dedication.

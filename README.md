@@ -95,5 +95,6 @@ This project is also dedicated:
 - [MaskTogetherAmerica](https://www.instagram.com/masktogetheramerica/)
 - [Violet Blue](https://www.patreon.com/violetblue)
 - [Lizzie](https://www.instagram.com/lizzie_traveler_public/)
+- [Julia Doubleday](https://www.thegauntlet.news/)
 
 Your contributions have not only informed this project but also inspired its mission. Thank you for your courage and dedication.
