@@ -316,7 +316,7 @@ const ArticlesPage = () => {
         </div>
         <p>Your contributions have not only informed this project but also inspired its mission. Thank you for your courage and dedication.
         </p>
-        <p>© 2024 What Do You Know About COVID-19?</p>
+        <p>© 2025 What Do You Know About COVID-19?</p>
       </footer>
     </div>
   );
