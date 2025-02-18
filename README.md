@@ -9,8 +9,6 @@
 
   Welcome to **"What Do You Know About COVID-19?"**, a project born out of a deep commitment to public health, education, and advocacy. This web application provides a collection of articles about COVID-19, aiming to equip people with reliable information to better understand the ongoing pandemic and make informed decisions.
 
-
-
 </div>
 
 ---
@@ -96,3 +94,7 @@ This project is also dedicated:
 - [Julia Doubleday](https://www.thegauntlet.news/)
 
 Your contributions have not only informed this project but also inspired its mission. Thank you for your courage and dedication.
+
+With love, 
+<br>
+**[Vie P.](https://whatdoyouknowaboutlove.com/viepaula/)**
