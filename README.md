@@ -97,4 +97,4 @@ Your contributions have not only informed this project but also inspired its mis
 
 With love, 
 <br>
-**[Vie P.](https://whatdoyouknowaboutlove.com/viepaula/)**
+**[Vie P.](https://whatdoyouknowaboutlove.com/viep/)**
